@@ -3,51 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andrés · Hábitos — preview</title>
+    <title>Andrés · Hábitos — No te falta disciplina. Te falta entender tu mente.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              night: '#080F1D', slate: '#132238', mist: '#F4F7FA',
-              cog: '#AAB4C3', accent: '#4F8FD9', amber: '#D6A84F',
-              line: '#DDE4EE', muted: '#5C6776',
-            },
-            fontFamily: { display: ['Space Grotesk', 'sans-serif'], sans: ['Inter', 'sans-serif'] },
-          },
-        },
-      };
+      tailwind.config = { theme: { extend: {
+        colors: { night:'#080F1D', slate:'#132238', mist:'#F4F7FA', cog:'#AAB4C3', accent:'#4F8FD9', amber:'#D6A84F', line:'#DDE4EE', muted:'#5C6776' },
+        fontFamily: { display:['Space Grotesk','sans-serif'], sans:['Inter','sans-serif'] },
+      } } };
     </script>
     <style>
-      body { font-family: 'Inter', sans-serif; }
-      h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
-      html { scroll-behavior: smooth; }
-      .hero-bg {
-        background:
-          radial-gradient(circle at 75% 25%, rgba(79,143,217,.20), transparent 40%),
-          linear-gradient(180deg, #080F1D 0%, #101B2E 100%);
-      }
-      .glass { background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.10); backdrop-filter: blur(12px); }
+      body { font-family:'Inter',sans-serif; }
+      h1,h2,h3 { font-family:'Space Grotesk',sans-serif; letter-spacing:-0.02em; }
+      html { scroll-behavior:smooth; }
+      .hero-bg { background: radial-gradient(circle at 75% 25%, rgba(79,143,217,.20), transparent 40%), linear-gradient(180deg,#080F1D 0%,#101B2E 100%); }
+      .glass { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.10); backdrop-filter:blur(12px); }
+      .eyebrow { font-size:.7rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#4F8FD9; }
+      .glow { box-shadow:0 0 24px rgba(79,143,217,.25); }
     </style>
   </head>
-  <body class="bg-mist text-slate">
+  <body class="bg-night text-white">
 
     <!-- ░░ NAV ░░ -->
-    <header class="absolute inset-x-0 top-0 z-20">
+    <header class="absolute inset-x-0 top-0 z-30">
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="#" class="flex items-center gap-2 text-white">
+        <a href="#inicio" class="flex items-center gap-2 text-white">
           <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" class="h-6 w-6 text-accent"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="12" r="1.4" fill="currentColor"/><circle cx="21" cy="11" r="1.4" fill="currentColor"/><circle cx="19" cy="21" r="1.4" fill="currentColor"/><path d="M11 12L21 11 19 21 11 12"/></svg>
           <span class="text-sm font-medium tracking-widest uppercase">Andrés · Hábitos</span>
         </a>
-        <div class="hidden items-center gap-7 text-sm text-white/70 sm:flex">
+        <div class="hidden items-center gap-7 text-sm text-white/70 md:flex">
           <a href="#inicio" class="hover:text-white">Inicio</a>
           <a href="#sobre" class="hover:text-white">Sobre mí</a>
-          <a href="#feed" class="hover:text-white">Contenido</a>
-          <a href="#base" class="hover:text-white">Recursos</a>
+          <a href="#contenido" class="hover:text-white">Contenido</a>
+          <a href="#ciencia" class="hover:text-white">Recursos</a>
           <a href="#acceder" class="rounded-full bg-accent px-5 py-2 font-semibold text-white hover:bg-accent/90">Quiero empezar</a>
         </div>
       </nav>
@@ -55,43 +45,29 @@
 
     <!-- ░░ HERO ░░ -->
     <section id="inicio" class="hero-bg relative overflow-hidden text-white">
-      <!-- Cerebro de nodos (decorativo, derecha) -->
       <svg viewBox="0 0 460 420" class="pointer-events-none absolute -right-16 top-10 h-[460px] w-[460px] opacity-70 sm:right-0" fill="none">
-        <g stroke="#4F8FD9" stroke-width="0.8" stroke-opacity="0.45">
-          <path d="M120 140L180 90 250 110 320 95 360 150 330 220 360 280 300 320 230 300 170 330 130 270 150 200 120 140Z"/>
-          <path d="M180 90L230 160 320 95M250 110L230 160 170 200M320 95L330 220 230 300M360 150L300 200 330 220M170 200L230 300 300 200M130 270L170 200 230 300M300 320L300 200 360 280M170 330L230 300"/>
-        </g>
-        <g fill="#7FB0E8">
-          <circle cx="120" cy="140" r="2.5"/><circle cx="180" cy="90" r="2.5"/><circle cx="250" cy="110" r="2.5"/><circle cx="320" cy="95" r="3"/><circle cx="360" cy="150" r="2.5"/><circle cx="230" cy="160" r="2.5"/><circle cx="170" cy="200" r="2.5"/><circle cx="300" cy="200" r="3"/><circle cx="330" cy="220" r="2.5"/><circle cx="130" cy="270" r="2.5"/><circle cx="170" cy="330" r="2.5"/><circle cx="230" cy="300" r="3"/><circle cx="300" cy="320" r="2.5"/><circle cx="360" cy="280" r="2.5"/>
-        </g>
-        <circle cx="300" cy="200" r="6" fill="#D6A84F" opacity="0.9"/>
-        <circle cx="300" cy="200" r="12" fill="#D6A84F" opacity="0.18"/>
+        <g stroke="#4F8FD9" stroke-width="0.8" stroke-opacity="0.45"><path d="M120 140L180 90 250 110 320 95 360 150 330 220 360 280 300 320 230 300 170 330 130 270 150 200 120 140Z"/><path d="M180 90L230 160 320 95M250 110L230 160 170 200M320 95L330 220 230 300M360 150L300 200 330 220M170 200L230 300 300 200M130 270L170 200 230 300M300 320L300 200 360 280M170 330L230 300"/></g>
+        <g fill="#7FB0E8"><circle cx="120" cy="140" r="2.5"/><circle cx="180" cy="90" r="2.5"/><circle cx="250" cy="110" r="2.5"/><circle cx="320" cy="95" r="3"/><circle cx="360" cy="150" r="2.5"/><circle cx="230" cy="160" r="2.5"/><circle cx="170" cy="200" r="2.5"/><circle cx="300" cy="200" r="3"/><circle cx="330" cy="220" r="2.5"/><circle cx="130" cy="270" r="2.5"/><circle cx="170" cy="330" r="2.5"/><circle cx="230" cy="300" r="3"/><circle cx="300" cy="320" r="2.5"/><circle cx="360" cy="280" r="2.5"/></g>
+        <circle cx="300" cy="200" r="6" fill="#D6A84F" opacity="0.9"/><circle cx="300" cy="200" r="12" fill="#D6A84F" opacity="0.18"/>
       </svg>
-
       <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-6 pb-20 pt-28 sm:grid-cols-2 sm:pb-28 sm:pt-36">
-        <!-- Texto -->
         <div class="relative z-10">
-          <p class="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-accent uppercase"><span class="inline-block h-1.5 w-1.5 rounded-full bg-accent"></span> Ciencia aplicada a lo que importa</p>
+          <p class="eyebrow flex items-center gap-2"><span class="inline-block h-1.5 w-1.5 rounded-full bg-accent"></span> Ciencia aplicada a lo que importa</p>
           <h1 class="mt-5 text-4xl font-bold leading-[1.05] sm:text-6xl">No te falta disciplina.<br />Te falta <span class="text-accent">entender</span> tu mente.</h1>
           <p class="mt-6 max-w-md text-lg text-cog">Ciencia del comportamiento aplicada a hábitos sostenibles. Entendé por qué hacés lo que hacés y diseñá un sistema para avanzar cada día.</p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#acceder" class="group inline-flex items-center justify-center gap-3 rounded-full bg-accent py-2 pl-6 pr-2 font-semibold text-white transition hover:bg-accent/90">Quiero ordenar mis hábitos <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-night"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-4 w-4 transition group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-            <a href="#feed" class="group inline-flex items-center justify-center gap-3 rounded-full border border-white/20 py-2 pl-2 pr-6 font-semibold text-white transition hover:border-white"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30"><svg viewBox="0 0 24 24" fill="currentColor" class="h-3.5 w-3.5"><path d="M8 5v14l11-7z"/></svg></span> Ver contenido gratuito</a>
+            <a href="#contenido" class="group inline-flex items-center justify-center gap-3 rounded-full border border-white/20 py-2 pl-2 pr-6 font-semibold text-white transition hover:border-white"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30"><svg viewBox="0 0 24 24" fill="currentColor" class="h-3.5 w-3.5"><path d="M8 5v14l11-7z"/></svg></span> Ver contenido gratuito</a>
           </div>
-          <!-- Autoridad -->
           <div class="mt-12 flex flex-wrap gap-6 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5">
             <div class="flex items-center gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-6 w-6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg><div><p class="text-xl font-bold leading-none">542</p><p class="mt-1 text-[10px] tracking-wide text-cog uppercase">Siguiendo</p></div></div>
             <div class="flex items-center gap-3 border-l border-white/10 pl-6"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-6 w-6"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="6" r="1.6" fill="#4F8FD9"/><circle cx="16" cy="17" r="1.6" fill="#4F8FD9"/><circle cx="7" cy="16" r="1.6" fill="#4F8FD9"/><path d="M6 7L18 6 16 17 7 16 6 7"/></svg><div><p class="text-xl font-bold leading-none">Base real</p><p class="mt-1 text-[10px] tracking-wide text-cog uppercase">En neurociencia</p></div></div>
             <div class="flex items-center gap-3 border-l border-white/10 pl-6"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-6 w-6"><path d="M12 3l7 3v6c0 4-3 7-7 8-4-1-7-4-7-8V6l7-3z"/></svg><div><p class="text-xl font-bold leading-none">0%</p><p class="mt-1 text-[10px] tracking-wide text-cog uppercase">Motivación vacía</p></div></div>
           </div>
         </div>
-        <!-- Card de foto flotante -->
         <div class="relative z-10 sm:justify-self-end sm:pt-48">
           <div class="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/15 bg-white/[0.04] backdrop-blur">
-            <div class="relative h-44 bg-gradient-to-br from-slate to-night">
-              <span class="absolute inset-0 flex items-center justify-center text-sm text-white/25">tu foto acá</span>
-              <img src="/perfil.jpg" alt="Andrés" onerror="this.style.display='none'" class="absolute inset-0 h-full w-full object-cover object-top" />
-            </div>
+            <div class="relative h-44 bg-gradient-to-br from-slate to-night"><span class="absolute inset-0 flex items-center justify-center text-sm text-white/25">tu foto acá</span><img src="/perfil.jpg" alt="Andrés" onerror="this.style.display='none'" class="absolute inset-0 h-full w-full object-cover object-top" /></div>
             <div class="p-6">
               <svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-7 w-7"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="6" r="1.6" fill="#4F8FD9"/><circle cx="16" cy="17" r="1.6" fill="#4F8FD9"/><circle cx="7" cy="16" r="1.6" fill="#4F8FD9"/><path d="M6 7L18 6 16 17 7 16 6 7M6 7l10 10"/></svg>
               <h3 class="mt-3 text-lg font-semibold">Entender tu mente</h3>
@@ -101,223 +77,248 @@
           </div>
         </div>
       </div>
-
-      <!-- Scroll cue -->
-      <div class="relative z-10 pb-10 text-center">
-        <a href="#antes" class="text-xs tracking-wide text-cog uppercase">Descubrí cómo funciona</a>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="2" class="mx-auto mt-2 h-5 w-5 animate-bounce"><path d="M6 9l6 6 6-6"/></svg>
-      </div>
+      <div class="relative z-10 pb-10 text-center"><a href="#antes" class="text-xs tracking-wide text-cog uppercase">Descubrí cómo funciona</a><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="2" class="mx-auto mt-2 h-5 w-5 animate-bounce"><path d="M6 9l6 6 6-6"/></svg></div>
     </section>
 
-    <!-- ░░ EL PROBLEMA ░░ -->
-    <section class="bg-slate text-white">
-      <div class="mx-auto max-w-4xl px-6 py-16">
-        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">El problema</p>
-        <h2 class="mx-auto mt-4 max-w-2xl text-center text-2xl font-bold sm:text-3xl">El problema no es que seas flojo. Es que intentás cambiar con el sistema equivocado.</h2>
-        <div class="mt-10 grid gap-4 sm:grid-cols-3">
-          <div class="glass rounded-3xl p-6"><p class="text-cog">Dependés de las ganas.</p></div>
-          <div class="glass rounded-3xl p-6"><p class="text-cog">Empezás fuerte y abandonás.</p></div>
-          <div class="glass rounded-3xl p-6"><p class="text-cog">Sabés qué hacer, pero no lo sostenés.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ░░ QUIÉN SOY ░░ -->
-    <section id="quien" class="bg-mist">
-      <div class="mx-auto max-w-2xl px-6 py-16 text-center">
-        <p class="text-xs font-semibold tracking-[0.2em] text-accent uppercase">Quién soy</p>
-        <h2 class="mt-4 text-2xl font-bold text-night sm:text-3xl">No soy otro coach motivacional</h2>
-        <p class="mx-auto mt-5 max-w-xl text-lg text-muted">Soy Andrés. Estudio comportamiento humano, hábitos y mentalidad, y traduzco conceptos complejos en herramientas simples que podés aplicar en tu día a día.</p>
-      </div>
-    </section>
-
-    <!-- ░░ QUÉ HAGO ░░ -->
-    <section class="bg-night text-white">
-      <div class="mx-auto max-w-4xl px-6 py-16">
-        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">Qué hago</p>
-        <h2 class="mt-4 text-center text-2xl font-bold sm:text-3xl">Traduzco la ciencia a algo que usás hoy</h2>
-        <div class="mt-10 grid gap-4 sm:grid-cols-3">
-          <div class="glass rounded-3xl p-6">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-7 w-7 text-accent"><circle cx="6" cy="7" r="1.6" fill="currentColor"/><circle cx="18" cy="6" r="1.6" fill="currentColor"/><circle cx="16" cy="17" r="1.6" fill="currentColor"/><circle cx="7" cy="16" r="1.6" fill="currentColor"/><path d="M6 7L18 6 16 17 7 16 6 7M6 7l10 10"/></svg>
-            <h3 class="mt-4 font-semibold">Comportamiento</h3>
-            <p class="mt-2 text-sm text-cog">Entendés por qué repetís patrones.</p>
+    <!-- ░░ ANTES VS DESPUÉS ░░ -->
+    <section id="sobre" class="bg-night py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="text-center"><p class="eyebrow text-amber">La transformación real</p><h2 class="mt-3 text-3xl font-bold sm:text-5xl">Antes <span class="text-cog">vs</span> <span class="text-accent">Después</span>.</h2><p class="mx-auto mt-4 max-w-xl text-cog">No cambiás solo lo que hacés. Cambiás la forma en que pensás, decidís y sostenés tus acciones.</p></div>
+        <div class="mt-12 grid items-center gap-6 lg:grid-cols-[1fr_auto_1fr]">
+          <div class="rounded-3xl border border-white/10 bg-white/[0.02] p-6">
+            <h3 class="text-center text-xl font-semibold text-cog">Antes</h3>
+            <div class="mt-5 space-y-3">
+              <div class="flex gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 text-cog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><path d="M7 18a5 5 0 010-10 6 6 0 0111-1 4 4 0 01-1 9H7z"/></svg></span><div><p class="font-semibold">Dependés de las ganas</p><p class="mt-1 text-sm text-cog">Esperás motivación para actuar y casi nunca llega.</p></div></div>
+              <div class="flex gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 text-cog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></span><div><p class="font-semibold">Improvisás cada día</p><p class="mt-1 text-sm text-cog">No tenés un plan claro y reaccionás en lugar de avanzar.</p></div></div>
+              <div class="flex gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 text-cog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><path d="M4 8l5 5 4-4 7 7"/></svg></span><div><p class="font-semibold">Te frustrás rápido</p><p class="mt-1 text-sm text-cog">Cualquier obstáculo te desanima y te tira para atrás.</p></div></div>
+              <div class="flex gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 text-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><rect x="3" y="8" width="15" height="8" rx="2"/><path d="M21 11v2M6 11v2" stroke-width="2"/></svg></span><div><p class="font-semibold">Abandonás cuando baja la energía</p><p class="mt-1 text-sm text-cog">Sin estructura, tu compromiso depende de tu estado.</p></div></div>
+            </div>
           </div>
-          <div class="glass rounded-3xl p-6">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-7 w-7 text-accent"><path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7"/><path d="M18 2.5v3.2h-3.2M6 21.5v-3.2h3.2"/></svg>
-            <h3 class="mt-4 font-semibold">Hábitos</h3>
-            <p class="mt-2 text-sm text-cog">Convertís intención en acciones chicas.</p>
-          </div>
-          <div class="glass rounded-3xl p-6">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-7 w-7 text-accent"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
-            <h3 class="mt-4 font-semibold">Mentalidad</h3>
-            <p class="mt-2 text-sm text-cog">Reescribís la historia que te dirige.</p>
+          <div class="flex items-center justify-center"><svg viewBox="0 0 80 24" class="h-6 w-20"><circle cx="6" cy="12" r="3" fill="#4F8FD9"/><line x1="10" y1="12" x2="60" y2="12" stroke="#4F8FD9" stroke-width="1.5" stroke-dasharray="2 3"/><circle cx="44" cy="12" r="3" fill="#D6A84F"/><path d="M60 6l8 6-8 6" fill="none" stroke="#D6A84F" stroke-width="2"/></svg></div>
+          <div class="glow rounded-3xl border border-accent/40 bg-accent/[0.04] p-6">
+            <h3 class="text-center text-xl font-semibold text-accent">Después</h3>
+            <div class="mt-5 space-y-3">
+              <div class="flex gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent/30 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5"><circle cx="6" cy="7" r="1.6" fill="currentColor"/><circle cx="18" cy="6" r="1.6" fill="currentColor"/><circle cx="16" cy="17" r="1.6" fill="currentColor"/><circle cx="7" cy="16" r="1.6" fill="currentColor"/><path d="M6 7L18 6 16 17 7 16 6 7"/></svg></span><div><p class="font-semibold">Entendés tu patrón</p><p class="mt-1 text-sm text-cog">Conocés cómo funciona tu mente y tomás mejores decisiones.</p></div></div>
+              <div class="flex gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent/30 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><path d="M4 7h6M4 12h10M4 17h7"/><circle cx="17" cy="9" r="1.5" fill="currentColor"/><circle cx="19" cy="16" r="1.5" fill="currentColor"/></svg></span><div><p class="font-semibold">Reducís fricción</p><p class="mt-1 text-sm text-cog">Simplificás tu entorno y actuás con menos resistencia.</p></div></div>
+              <div class="flex gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent/30 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span><div><p class="font-semibold">Actuás con claridad</p><p class="mt-1 text-sm text-cog">Tenés foco, prioridades y un plan que te guía cada día.</p></div></div>
+              <div class="flex gap-4 rounded-2xl border border-amber/20 bg-amber/[0.04] p-4"><span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-amber/40 text-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><path d="M8 12a4 4 0 100-.1M16 12a4 4 0 100 .1" /></svg></span><div><p class="font-semibold">Sostenés un sistema</p><p class="mt-1 text-sm text-cog">Tu progreso no depende de la motivación, sino del sistema.</p></div></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ░░ CÓMO PUEDO AYUDARTE ░░ -->
-    <section class="bg-mist">
-      <div class="mx-auto max-w-2xl px-6 py-16">
-        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">¿Cómo puedo ayudarte?</p>
-        <h2 class="mt-4 text-center text-2xl font-bold text-night sm:text-3xl">A dónde vas a llegar</h2>
-        <ul class="mx-auto mt-8 grid max-w-xl gap-3">
-          <li class="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 shrink-0 text-accent"><path d="M5 12.5l4 4 10-10"/></svg> Entender por qué procrastinás — y cortarlo.</li>
-          <li class="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 shrink-0 text-accent"><path d="M5 12.5l4 4 10-10"/></svg> Hábitos que se sostienen sin fuerza de voluntad.</li>
-          <li class="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 shrink-0 text-accent"><path d="M5 12.5l4 4 10-10"/></svg> Un entorno que hace fácil el cambio.</li>
-          <li class="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 shrink-0 text-accent"><path d="M5 12.5l4 4 10-10"/></svg> Reescribir la historia que te contás.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ░░ LA IDEA CENTRAL + MÉTODO ░░ -->
-    <section class="bg-slate text-white">
-      <div class="mx-auto max-w-3xl px-6 py-16">
-        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">La idea central</p>
-        <h2 class="mt-4 text-center text-2xl font-bold sm:text-3xl">No peleás con la conducta. Cambiás la <span class="text-accent">interpretación</span>.</h2>
-        <p class="mx-auto mt-4 max-w-xl text-center text-cog">La mayoría ataca la rama —el síntoma—. El cambio real está en la raíz: cómo interpretás lo que te pasa.</p>
-
-        <!-- Cadena de interpretación -->
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-2 text-sm">
-          <span class="rounded-full border border-white/15 px-4 py-2 text-cog">Situación</span>
-          <span class="text-accent">→</span>
-          <span class="rounded-full border border-accent bg-accent/10 px-4 py-2 font-semibold text-accent">Interpretación</span>
-          <span class="text-accent">→</span>
-          <span class="rounded-full border border-white/15 px-4 py-2 text-cog">Conducta</span>
-          <span class="text-accent">→</span>
-          <span class="rounded-full border border-white/15 px-4 py-2 text-cog">Resultado</span>
+        <div class="mt-8 grid gap-6 rounded-3xl border border-white/10 bg-white/[0.02] p-8 md:grid-cols-4 md:items-center">
+          <div><p class="eyebrow">Lo que cambia</p><p class="mt-2 font-semibold">Transformás tu <span class="text-accent">interior</span> y tu <span class="text-accent">exterior</span>.</p></div>
+          <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-9 w-9 shrink-0"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="6" r="1.6" fill="#4F8FD9"/><circle cx="12" cy="16" r="1.6" fill="#4F8FD9"/><path d="M6 7L18 6 12 16 6 7"/></svg><div><p class="font-semibold">Pensamiento</p><p class="mt-1 text-xs text-cog">Pasás del caos mental a la claridad profunda.</p></div></div>
+          <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-9 w-9 shrink-0"><path d="M4 11l8-6 8 6M6 10v8h12v-8"/></svg><div><p class="font-semibold">Entorno</p><p class="mt-1 text-xs text-cog">Diseñás un entorno que te impulsa a crecer.</p></div></div>
+          <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#D6A84F" stroke-width="1.4" class="h-9 w-9 shrink-0"><circle cx="12" cy="8" r="3"/><path d="M6 20c0-3 2.5-5 6-5s6 2 6 5"/></svg><div><p class="font-semibold">Conducta</p><p class="mt-1 text-xs text-cog">Tus acciones dejan de ser esfuerzo y se vuelven hábito.</p></div></div>
         </div>
-        <p class="mt-3 text-center text-xs text-cog">↑ El punto donde se cambia todo.</p>
+      </div>
+    </section>
 
-        <!-- Raíces y Ramas -->
-        <div class="mt-10 grid gap-4 sm:grid-cols-2">
-          <div class="glass rounded-3xl p-6">
-            <p class="text-xs font-semibold tracking-widest text-accent uppercase">Ramas · lo que ves</p>
-            <p class="mt-2 text-cog">Procrastinás, abandonás, te frustrás. El síntoma visible.</p>
-          </div>
-          <div class="glass rounded-3xl p-6">
-            <p class="text-xs font-semibold tracking-widest text-accent uppercase">Raíces · lo que lo causa</p>
-            <p class="mt-2 text-cog">Interpretaciones, creencias, la historia que te contás. Acá trabajamos.</p>
+    <!-- ░░ PATRONES QUE TE FRENAN ░░ -->
+    <section class="bg-slate py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="text-center"><p class="eyebrow">Lo que te detiene</p><h2 class="mt-3 text-3xl font-bold sm:text-4xl">Patrones que hoy te <span class="text-accent">frenan</span>.</h2><p class="mx-auto mt-4 max-w-xl text-cog">No son fallas de carácter, son patrones aprendidos. Identificarlos es el primer paso para cambiarlos.</p></div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <div class="glass rounded-3xl p-7"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.3" class="h-9 w-9"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="6" r="1.6" fill="#4F8FD9"/><circle cx="16" cy="17" r="1.6" fill="#4F8FD9"/><circle cx="7" cy="16" r="1.6" fill="#4F8FD9"/><path d="M6 7L18 6 16 17 7 16 6 7M6 7l10 10"/></svg><p class="eyebrow mt-6">Patrón 01</p><h3 class="mt-2 text-lg font-semibold">Dependés de las ganas</h3><p class="mt-2 text-sm text-cog">Esperás motivarte para actuar, pero la motivación es inestable y no aparece cuando más la necesitás.</p></div>
+          <div class="glass rounded-3xl p-7"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-9 w-9"><path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7"/><path d="M18 2.5v3.2h-3.2M6 21.5v-3.2h3.2"/></svg><p class="eyebrow mt-6">Patrón 02</p><h3 class="mt-2 text-lg font-semibold">Arrancás fuerte y abandonás</h3><p class="mt-2 text-sm text-cog">Tu entusiasmo inicial se diluye porque no tenés un sistema que lo sostenga cuando baja la energía.</p></div>
+          <div class="glass rounded-3xl p-7"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-9 w-9"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><p class="eyebrow mt-6">Patrón 03</p><h3 class="mt-2 text-lg font-semibold">Sabés qué hacer, pero no lo hacés</h3><p class="mt-2 text-sm text-cog">Tenés claridad, pero te gana la dispersión, la procrastinación y el caos del día a día.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ ¿QUÉ TE ESTÁ FRENANDO? (dinámica) ░░ -->
+    <section class="bg-night py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div><p class="eyebrow">Decision point: conocete</p><h2 class="mt-3 text-3xl font-bold sm:text-4xl">¿Qué te está <span class="text-accent">frenando</span>?</h2><p class="mt-3 max-w-2xl text-cog">Explorá los patrones más comunes que sabotean el cambio. Elegí el que más se parece a vos para descubrir qué hay detrás.</p></div>
+        <div id="quiz-options" class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <button class="quiz-btn rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-accent" data-k="tiempo"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-4 w-4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><p class="mt-3 font-semibold">No tengo tiempo</p><p class="mt-1 text-xs text-cog">Siento que el día no alcanza.</p></button>
+          <button class="quiz-btn rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-accent" data-k="intensidad"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-4 w-4"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><p class="mt-3 font-semibold">Arranco con todo y a los 3 días lo dejo</p><p class="mt-1 text-xs text-cog">Me cuesta sostener en el tiempo.</p></button>
+          <button class="quiz-btn rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-accent" data-k="foco"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-4 w-4"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="17" r="1.6" fill="#4F8FD9"/><path d="M6 7l12 10"/></svg></span><p class="mt-3 font-semibold">Me distraigo con facilidad</p><p class="mt-1 text-xs text-cog">Me cuesta mantener el foco.</p></button>
+          <button class="quiz-btn rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-accent" data-k="resultados"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-4 w-4"><path d="M4 16l5-5 4 4 7-8"/></svg></span><p class="mt-3 font-semibold">No veo resultados y me desmotivo</p><p class="mt-1 text-xs text-cog">Siento que nada cambia.</p></button>
+          <button class="quiz-btn rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-accent" data-k="autosabotaje"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-4 w-4"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9 15c1-1 5-1 6 0"/></svg></span><p class="mt-3 font-semibold">Sé qué hacer, pero no lo hago</p><p class="mt-1 text-xs text-cog">Me saboteo aunque lo tengo claro.</p></button>
+        </div>
+        <div class="mt-6 rounded-3xl border border-accent/30 bg-white/[0.02] p-8">
+          <p class="eyebrow">Lo que te puede estar pasando</p>
+          <div class="mt-5 grid gap-6 md:grid-cols-3">
+            <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-7 w-7 shrink-0"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><div><p class="font-semibold">Lo que parece</p><p id="q-parece" class="mt-1 text-sm text-cog">Falta de disciplina. Pensás que el problema sos vos.</p></div></div>
+            <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-7 w-7 shrink-0"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="6" r="1.6" fill="#4F8FD9"/><circle cx="12" cy="16" r="1.6" fill="#4F8FD9"/><path d="M6 7L18 6 12 16 6 7"/></svg><div><p class="font-semibold">Lo que hay detrás</p><p id="q-detras" class="mt-1 text-sm text-cog">Expectativas irreales + sistema débil. Intentás cambiar desde la motivación.</p></div></div>
+            <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#D6A84F" stroke-width="1.5" class="h-7 w-7 shrink-0"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg><div><p class="font-semibold text-amber">Microacción</p><p id="q-micro" class="mt-1 text-sm text-cog">Reducí, enfocá y repetí. Elegí una sola acción mínima que puedas sostener 7 días.</p></div></div>
           </div>
         </div>
-
-        <!-- Proceso (4 pasos = PRE-ASCENSO) -->
-        <p class="mt-14 text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">El proceso</p>
-        <div class="relative mt-8 grid gap-6 sm:grid-cols-4">
-          <div class="absolute left-[12%] right-[12%] top-5 hidden border-t border-dashed border-white/20 sm:block"></div>
-          <div class="relative text-center"><div class="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-bold text-accent">01</div><p class="mt-3 font-semibold">Observar</p><p class="mt-1 text-xs text-cog">Detectar las ramas.</p></div>
-          <div class="relative text-center"><div class="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-bold text-accent">02</div><p class="mt-3 font-semibold">Comprender</p><p class="mt-1 text-xs text-cog">Llegar a la raíz.</p></div>
-          <div class="relative text-center"><div class="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-bold text-accent">03</div><p class="mt-3 font-semibold">Reinterpretar</p><p class="mt-1 text-xs text-cog">Cuestionar y reescribir.</p></div>
-          <div class="relative text-center"><div class="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-bold text-accent">04</div><p class="mt-3 font-semibold">Aplicar</p><p class="mt-1 text-xs text-cog">Nueva evidencia, nueva identidad.</p></div>
+        <!-- dos paneles -->
+        <div class="mt-6 grid gap-6 lg:grid-cols-2">
+          <div class="rounded-3xl border border-white/10 bg-white/[0.02] p-8">
+            <p class="eyebrow">Sistema interno del cambio</p><h3 class="mt-3 text-2xl font-semibold">Cómo funciona el cambio real</h3><p class="mt-2 text-sm text-cog">No es motivación. Es un sistema. Cuando alineás estas 4 fuerzas, el cambio deja de depender de vos y empieza a sostenerse solo.</p>
+            <div class="mt-8 flex items-start justify-between gap-1 text-center">
+              <div class="flex-1"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5"><circle cx="6" cy="7" r="1.6" fill="currentColor"/><circle cx="18" cy="6" r="1.6" fill="currentColor"/><circle cx="16" cy="17" r="1.6" fill="currentColor"/><circle cx="7" cy="16" r="1.6" fill="currentColor"/><path d="M6 7L18 6 16 17 7 16 6 7"/></svg></span><p class="mt-2 text-sm font-semibold">Mente</p><p class="mt-1 text-[11px] text-cog">Claridad y enfoque.</p></div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="2" class="mt-4 h-4 w-4 shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              <div class="flex-1"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7"/></svg></span><p class="mt-2 text-sm font-semibold">Hábitos</p><p class="mt-1 text-[11px] text-cog">Acciones que se repiten.</p></div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="2" class="mt-4 h-4 w-4 shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              <div class="flex-1"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5"><path d="M4 11l8-6 8 6M6 10v8h12v-8"/></svg></span><p class="mt-2 text-sm font-semibold">Entorno</p><p class="mt-1 text-[11px] text-cog">Contexto que impulsa.</p></div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="2" class="mt-4 h-4 w-4 shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              <div class="flex-1"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-amber/40 bg-amber/10 text-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5"><circle cx="12" cy="8" r="3"/><path d="M6 20c0-3 2.5-5 6-5s6 2 6 5"/></svg></span><p class="mt-2 text-sm font-semibold">Identidad</p><p class="mt-1 text-[11px] text-cog">La persona que actúa.</p></div>
+            </div>
+            <div class="mt-6 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-center"><p class="text-sm"><span class="font-semibold text-accent">Resultado:</span> cambio sostenible y libertad personal.</p></div>
+          </div>
+          <div class="rounded-3xl border border-white/10 bg-white/[0.02] p-8">
+            <p class="eyebrow">Tus decisiones, tu rumbo</p><h3 class="mt-3 text-2xl font-semibold">Cada decisión te lleva a un futuro</h3><p class="mt-2 text-sm text-cog">Pequeñas elecciones diarias crean grandes diferencias. Elegí con conciencia. Diseñá tu camino.</p>
+            <div class="mt-8 space-y-3">
+              <div class="flex items-center gap-4 rounded-2xl border border-accent/20 bg-accent/[0.04] p-4"><span class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><path d="M5 16l4-8 3 5 3-7 4 10"/></svg></span><div><p class="font-semibold text-accent">Camino de crecimiento</p><p class="text-xs text-cog">Disciplina diaria, claridad y resultados compuestos.</p></div></div>
+              <div class="flex items-center gap-4 rounded-2xl border border-white/10 p-4"><span class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-cog"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><circle cx="6" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="18" cy="12" r="1.5"/></svg></span><div><p class="font-semibold">Camino automático</p><p class="text-xs text-cog">Vivís en piloto automático y te adaptás al entorno.</p></div></div>
+              <div class="flex items-center gap-4 rounded-2xl border border-amber/20 p-4"><span class="flex h-10 w-10 items-center justify-center rounded-full border border-amber/40 text-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><p class="font-semibold">Camino de regresión</p><p class="text-xs text-cog">Desgaste, frustración y la misma historia de siempre.</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 flex flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.02] p-6 md:flex-row md:justify-between">
+          <p class="flex items-center gap-3 font-semibold"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-7 w-7"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg> Entender es el primer paso. Aplicar es lo que transforma.</p>
+          <a href="#acceder" class="group inline-flex items-center gap-3 rounded-full bg-accent py-2 pl-6 pr-2 font-semibold text-white transition hover:bg-accent/90">Quiero ordenar mis hábitos <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-night"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-4 w-4 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
         </div>
       </div>
     </section>
 
-    <!-- ░░ TEST INTERACTIVO ░░ -->
-    <section class="bg-mist">
-      <div class="mx-auto max-w-2xl px-6 py-16">
-        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">Probá algo ahora</p>
-        <h2 class="mt-4 text-center text-2xl font-bold text-night sm:text-3xl">¿Qué te está frenando?</h2>
-        <p class="mt-3 text-center text-muted">Elegí tu rama (el síntoma) y mirá la raíz que hay detrás.</p>
-        <div class="mt-8 grid gap-3">
-          <button data-r="Arranco con todo y a los 3 días lo dejo" class="quiz-btn flex items-center justify-between rounded-2xl border border-line bg-white px-5 py-4 text-left font-medium shadow-sm transition hover:border-accent">Arranco con todo y a los 3 días lo dejo <span class="text-accent">→</span></button>
-          <button data-r="Sé qué tengo que hacer, pero no lo hago" class="quiz-btn flex items-center justify-between rounded-2xl border border-line bg-white px-5 py-4 text-left font-medium shadow-sm transition hover:border-accent">Sé qué tengo que hacer, pero no lo hago <span class="text-accent">→</span></button>
-          <button data-r="Solo avanzo los días que tengo ganas" class="quiz-btn flex items-center justify-between rounded-2xl border border-line bg-white px-5 py-4 text-left font-medium shadow-sm transition hover:border-accent">Solo avanzo los días que tengo ganas <span class="text-accent">→</span></button>
+    <!-- ░░ TU PROGRESO TIENE ETAPAS ░░ -->
+    <section class="bg-slate py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <p class="eyebrow">Cómo avanza el cambio</p><h2 class="mt-3 text-3xl font-bold sm:text-5xl">Tu <span class="text-accent">progreso</span> tiene etapas.</h2><p class="mt-4 max-w-xl text-cog">El cambio sostenible no aparece de golpe. Se instala paso a paso hasta convertirse en sistema.</p>
+        <div class="relative mt-14 grid gap-8 sm:grid-cols-3 lg:grid-cols-5">
+          <div class="absolute left-[10%] right-[10%] top-7 hidden border-t border-dashed border-white/15 lg:block"></div>
+          <div class="relative text-center"><div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-6 w-6"><circle cx="6" cy="7" r="1.6" fill="currentColor"/><circle cx="18" cy="6" r="1.6" fill="currentColor"/><circle cx="16" cy="17" r="1.6" fill="currentColor"/><circle cx="7" cy="16" r="1.6" fill="currentColor"/><path d="M6 7L18 6 16 17 7 16 6 7"/></svg></div><p class="mt-4 font-semibold">Día 1 · Entendés qué te pasa</p><p class="mt-2 text-xs text-cog">Tomás conciencia de tus patrones y obtenés claridad sobre lo que querés cambiar.</p></div>
+          <div class="relative text-center"><div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6"><path d="M4 7h6M4 12h10M4 17h7"/><circle cx="18" cy="10" r="1.5" fill="currentColor"/></svg></div><p class="mt-4 font-semibold">Semana 1 · Reducís fricción</p><p class="mt-2 text-xs text-cog">Eliminás obstáculos y hacés más fácil la acción que te acerca a tu objetivo.</p></div>
+          <div class="relative text-center"><div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></div><p class="mt-4 font-semibold">Semana 2 · Instalás una acción mínima</p><p class="mt-2 text-xs text-cog">Implementás un hábito pequeño y concreto que genera movimiento real.</p></div>
+          <div class="relative text-center"><div class="glow mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-amber/50 bg-amber/10 text-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6"><path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7"/><path d="M18 2.5v3.2h-3.2M6 21.5v-3.2h3.2"/></svg></div><p class="mt-4 font-semibold">Semana 4 · Empezás a sostener</p><p class="mt-2 text-xs text-cog">La repetición crea tracción. Ganás consistencia y tu hábito empieza a afianzarse.</p></div>
+          <div class="relative text-center"><div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6"><path d="M12 3l7 3v6c0 4-3 7-7 8-4-1-7-4-7-8V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div><p class="mt-4 font-semibold">Mes 2+ · Sistema estable</p><p class="mt-2 text-xs text-cog">Tu sistema funciona para vos, incluso sin motivación. El cambio ya es parte de tu identidad.</p></div>
         </div>
-        <div id="quiz-result" class="mt-6 hidden rounded-2xl border border-accent bg-white p-6 text-center shadow-sm">
-          <p id="quiz-text" class="text-muted"></p>
-          <a href="#acceder" class="mt-4 inline-block rounded-full bg-accent px-6 py-3 font-semibold text-white transition hover:bg-accent/90">Ver cómo solucionarlo</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ░░ SITUACIONES QUE TRABAJO ░░ -->
-    <section class="bg-night text-white">
-      <div class="mx-auto max-w-4xl px-6 py-16">
-        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">En qué te acompaño</p>
-        <h2 class="mt-4 text-center text-2xl font-bold sm:text-3xl">Situaciones que trabajo</h2>
-        <div class="mt-10 grid gap-4 sm:grid-cols-3">
-          <div class="glass rounded-3xl p-6"><p class="font-semibold">Procrastinación crónica</p><p class="mt-2 text-sm text-cog">Cuando arrancar se vuelve la barrera.</p></div>
-          <div class="glass rounded-3xl p-6"><p class="font-semibold">Hábitos que no pegan</p><p class="mt-2 text-sm text-cog">Intentás una y otra vez sin sostenerlo.</p></div>
-          <div class="glass rounded-3xl p-6"><p class="font-semibold">Desorden mental</p><p class="mt-2 text-sm text-cog">Demasiadas ideas, poca acción concreta.</p></div>
+        <div class="mt-12 grid gap-6 rounded-3xl border border-white/10 bg-white/[0.02] p-8 md:grid-cols-4">
+          <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-8 w-8 shrink-0"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><div><p class="font-semibold">Claridad</p><p class="mt-1 text-xs text-cog">Entendés qué importa y hacia dónde vas.</p></div></div>
+          <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-8 w-8 shrink-0"><path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7"/></svg><div><p class="font-semibold">Constancia</p><p class="mt-1 text-xs text-cog">Pequeñas acciones, repetidas en el tiempo.</p></div></div>
+          <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-8 w-8 shrink-0"><path d="M12 3l7 3v6c0 4-3 7-7 8-4-1-7-4-7-8V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><div><p class="font-semibold">Confianza</p><p class="mt-1 text-xs text-cog">Cumplís lo que te proponés.</p></div></div>
+          <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#D6A84F" stroke-width="1.4" class="h-8 w-8 shrink-0"><path d="M4 16l5-5 4 4 7-8"/><path d="M16 7h4v4"/></svg><div><p class="font-semibold">Resultados compuestos</p><p class="mt-1 text-xs text-cog">El progreso se acumula y multiplica tu impacto.</p></div></div>
         </div>
       </div>
     </section>
 
-    <!-- ░░ BASE CIENTÍFICA ░░ -->
-    <section id="base" class="bg-mist">
-      <div class="mx-auto max-w-3xl px-6 py-16 text-center">
-        <p class="text-xs font-semibold tracking-[0.2em] text-accent uppercase">En qué me baso</p>
-        <h2 class="mt-4 text-2xl font-bold text-night sm:text-3xl">No es opinión: es ciencia del comportamiento</h2>
-        <div class="mt-10 grid gap-4 text-left sm:grid-cols-2">
-          <div class="rounded-2xl border border-line bg-white p-5 shadow-sm"><p class="text-xs font-semibold tracking-wide text-accent uppercase">Hábitos</p><p class="mt-1 text-sm text-muted">James Clear · BJ Fogg · Charles Duhigg</p></div>
-          <div class="rounded-2xl border border-line bg-white p-5 shadow-sm"><p class="text-xs font-semibold tracking-wide text-accent uppercase">Decisiones y mente</p><p class="mt-1 text-sm text-muted">Daniel Kahneman</p></div>
-          <div class="rounded-2xl border border-line bg-white p-5 shadow-sm"><p class="text-xs font-semibold tracking-wide text-accent uppercase">Neurociencia aplicada</p><p class="mt-1 text-sm text-muted">Andrew Huberman</p></div>
-          <div class="rounded-2xl border border-line bg-white p-5 shadow-sm"><p class="text-xs font-semibold tracking-wide text-accent uppercase">Comportamiento y cambio</p><p class="mt-1 text-sm text-muted">Stanford Behavior Design · psicología conductual</p></div>
+    <!-- ░░ EL LOOP DEL HÁBITO ░░ -->
+    <section class="bg-night py-20">
+      <div class="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1.4fr_1fr]">
+        <div>
+          <p class="eyebrow">Cómo se forma un hábito</p><h2 class="mt-3 text-3xl font-bold sm:text-5xl">El <span class="text-accent">loop</span> del hábito.</h2><p class="mt-4 max-w-md text-cog">Entendé cómo funciona el ciclo que repite tu conducta para dejar de pelear con tu mente y empezar a diseñar mejor tus acciones.</p>
+          <div class="relative mt-12 grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-4">
+            <div class="text-center"><p class="text-sm text-cog">1</p><div class="mx-auto mt-1 flex h-16 w-16 items-center justify-center rounded-full border border-accent/40 bg-accent/5 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-6 w-6"><path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M10.5 21a1.5 1.5 0 003 0"/></svg></div><p class="mt-3 font-semibold">Señal</p><p class="mt-1 text-xs text-cog">Algo dispara la conducta.</p></div>
+            <div class="text-center"><p class="text-sm text-cog">2</p><div class="mx-auto mt-1 flex h-16 w-16 items-center justify-center rounded-full border border-accent/40 bg-accent/5 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-6 w-6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><p class="mt-3 font-semibold">Acción</p><p class="mt-1 text-xs text-cog">Hacés la respuesta.</p></div>
+            <div class="text-center"><p class="text-sm text-amber">3</p><div class="glow mx-auto mt-1 flex h-16 w-16 items-center justify-center rounded-full border border-amber/50 bg-amber/5 text-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-6 w-6"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8S10 3 7 5s5 3 5 3 7-1 5-3-5 3-5 3"/></svg></div><p class="mt-3 font-semibold">Recompensa</p><p class="mt-1 text-xs text-cog">Tu cerebro recibe alivio o placer.</p></div>
+            <div class="text-center"><p class="text-sm text-cog">4</p><div class="mx-auto mt-1 flex h-16 w-16 items-center justify-center rounded-full border border-accent/40 bg-accent/5 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6"><path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7"/><path d="M18 2.5v3.2h-3.2M6 21.5v-3.2h3.2"/></svg></div><p class="mt-3 font-semibold">Repetición</p><p class="mt-1 text-xs text-cog">El patrón se consolida.</p></div>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/[0.02] p-8">
+          <p class="eyebrow">Dónde intervenir</p>
+          <div class="mt-6 space-y-6">
+            <div class="flex gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-accent/30 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5"><path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9"/></svg></span><div><p class="font-semibold">Cambiar la señal</p><p class="mt-1 text-sm text-cog">Modificá el disparador para guiar tu atención.</p></div></div>
+            <div class="flex gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-accent/30 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5"><path d="M4 7h6M4 12h10"/><circle cx="17" cy="9" r="1.5" fill="currentColor"/></svg></span><div><p class="font-semibold">Reducir la fricción</p><p class="mt-1 text-sm text-cog">Hacé más fácil la acción que te acerca a tu objetivo.</p></div></div>
+            <div class="flex gap-4"><span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-amber/40 text-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13"/></svg></span><div><p class="font-semibold">Hacer visible la recompensa</p><p class="mt-1 text-sm text-cog">Recordá el beneficio real que te mueve.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto mt-10 max-w-6xl px-6"><div class="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.02] p-6"><svg viewBox="0 0 24 24" fill="#4F8FD9" class="h-8 w-8 shrink-0 opacity-60"><path d="M7 7h4v6H7zM13 7h4v6h-4z"/></svg><p class="text-lg font-semibold sm:text-xl">No cambiás solo por <span class="text-cog">fuerza de voluntad</span>. Cambiás cuando <span class="text-accent">entendés el sistema</span>.</p></div></div>
+    </section>
+
+    <!-- ░░ NO ES OPINIÓN: ES CIENCIA ░░ -->
+    <section id="ciencia" class="bg-slate py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="text-center"><p class="eyebrow">Lo que nos sostiene</p><h2 class="mt-3 text-3xl font-bold sm:text-4xl">No es opinión: es <span class="text-accent">ciencia</span> del comportamiento.</h2><p class="mx-auto mt-4 max-w-xl text-cog">Basamos todo en evidencia. Aplicamos lo que funciona. Medimos, ajustamos y escalamos.</p></div>
+        <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div class="glass rounded-3xl p-6"><div class="flex h-12 w-12 items-center justify-center rounded-full border border-accent/30 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" class="h-6 w-6"><circle cx="6" cy="7" r="1.6" fill="currentColor"/><circle cx="18" cy="6" r="1.6" fill="currentColor"/><circle cx="16" cy="17" r="1.6" fill="currentColor"/><circle cx="7" cy="16" r="1.6" fill="currentColor"/><path d="M6 7L18 6 16 17 7 16 6 7"/></svg></div><h3 class="mt-4 font-semibold">Hábitos</h3><ul class="mt-3 space-y-1.5 text-sm text-cog"><li>• BJ Fogg</li><li>• James Clear</li><li>• Charles Duhigg</li></ul><p class="mt-4 text-xs text-cog/80">Formación de hábitos, señales ambientales y sistemas de constancia.</p></div>
+          <div class="glass rounded-3xl p-6"><div class="flex h-12 w-12 items-center justify-center rounded-full border border-accent/30 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-6 w-6"><path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7"/></svg></div><h3 class="mt-4 font-semibold">Decisiones</h3><ul class="mt-3 space-y-1.5 text-sm text-cog"><li>• Daniel Kahneman</li><li>• Nir Eyal</li><li>• Dan Ariely</li></ul><p class="mt-4 text-xs text-cog/80">Economía del comportamiento aplicada a elecciones diarias.</p></div>
+          <div class="glass rounded-3xl p-6"><div class="flex h-12 w-12 items-center justify-center rounded-full border border-accent/30 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" class="h-6 w-6"><circle cx="6" cy="7" r="1.6" fill="currentColor"/><circle cx="18" cy="6" r="1.6" fill="currentColor"/><circle cx="16" cy="17" r="1.6" fill="currentColor"/><circle cx="7" cy="16" r="1.6" fill="currentColor"/><path d="M6 7L18 6 16 17 7 16 6 7M6 7l10 10"/></svg></div><h3 class="mt-4 font-semibold">Neurociencia aplicada</h3><ul class="mt-3 space-y-1.5 text-sm text-cog"><li>• Andrew Huberman</li><li>• Lisa Feldman Barrett</li><li>• Antonio Damasio</li></ul><p class="mt-4 text-xs text-cog/80">Entendemos tu cerebro para diseñar estrategias que realmente funcionen.</p></div>
+          <div class="glass rounded-3xl border-amber/20 p-6"><div class="flex h-12 w-12 items-center justify-center rounded-full border border-amber/40 text-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-6 w-6"><circle cx="6" cy="12" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 11l8-4M8 13l8 4"/></svg></div><h3 class="mt-4 font-semibold">Diseño conductual</h3><ul class="mt-3 space-y-1.5 text-sm text-cog"><li>• B.J. Fogg Behavior Model</li><li>• Nudge Theory</li><li>• Matt Dalla Corte</li></ul><p class="mt-4 text-xs text-cog/80">Entornos, disparadores y estructuras que facilitan el cambio.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ░░ CÓMO EMPEZAR + FORM ░░ -->
-    <section id="acceder" class="bg-slate text-white">
-      <div class="mx-auto max-w-xl px-6 py-20">
-        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">Cómo empezar</p>
-        <h2 class="mt-4 text-center text-2xl font-bold sm:text-3xl">3 pasos para empezar</h2>
-        <ol class="mx-auto mt-8 grid gap-3">
-          <li class="flex gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4"><span class="font-bold text-accent">1</span> Seguime en Instagram <strong>@andrewmquez</strong>.</li>
-          <li class="flex gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4"><span class="font-bold text-accent">2</span> Descargá gratis la guía <strong>"5 hábitos respaldados por neurociencia"</strong>.</li>
-          <li class="flex gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4"><span class="font-bold text-accent">3</span> Aplicá un hábito y contame por DM cómo te fue.</li>
-        </ol>
-        <form class="mt-8 flex flex-col gap-4">
-          <input type="text" placeholder="Tu nombre" class="rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-white placeholder:text-white/40 outline-none focus:border-accent" />
-          <input type="email" placeholder="Tu email" class="rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-white placeholder:text-white/40 outline-none focus:border-accent" />
-          <input type="tel" placeholder="WhatsApp (opcional)" class="rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-white placeholder:text-white/40 outline-none focus:border-accent" />
-          <button type="button" class="rounded-full bg-accent px-7 py-3 font-semibold text-white transition hover:bg-accent/90">Mandame la guía gratis</button>
-        </form>
+    <!-- ░░ ASÍ VIVE LA MARCA EN REDES ░░ -->
+    <section id="contenido" class="bg-night py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <p class="eyebrow">La marca en acción</p><h2 class="mt-3 text-3xl font-bold sm:text-5xl">Así vive la <span class="text-accent">marca</span> en <span class="text-accent">redes</span>.</h2><p class="mt-4 max-w-xl text-cog">Contenido breve, visual y accionable para que la ciencia del comportamiento se convierta en algo que usás hoy.</p>
+        <div class="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+          <div><p class="text-sm text-accent">Reels</p><div class="mt-2 aspect-[9/16] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-slate to-night p-4"><p class="text-[10px] tracking-widest text-cog">ANDRÉS · HÁBITOS</p><div class="mt-16 text-white"><p class="font-semibold">La disciplina no aparece.</p><p class="font-semibold text-accent">Se entrena.</p></div></div></div>
+          <div><p class="text-sm text-accent">Carruseles</p><div class="mt-2 aspect-[9/16] overflow-hidden rounded-2xl border border-white/10 bg-slate p-4"><p class="text-[10px] text-cog">andreshabitos · 1/6</p><p class="mt-10 text-lg font-bold leading-tight">La <span class="text-accent">identidad</span> crea el hábito.</p><p class="mt-2 text-[11px] text-cog">No son tus metas las que te sostienen. Es la persona en la que te convertís.</p></div></div>
+          <div><p class="text-sm text-accent">Stories</p><div class="mt-2 aspect-[9/16] overflow-hidden rounded-2xl border border-amber/30 bg-slate p-4"><p class="text-[10px] text-cog">andreshabitos · 2h</p><p class="mt-10 font-semibold leading-tight">No te falta disciplina.<br/>Te falta <span class="text-accent">entender</span> tu mente.</p><div class="mt-6 rounded-full border border-white/15 px-3 py-1.5 text-[10px] text-cog">Enviar mensaje</div></div></div>
+          <div><p class="text-sm text-accent">Guías</p><div class="mt-2 aspect-[9/16] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-night to-slate p-4"><p class="text-[10px] tracking-widest text-cog">ANDRÉS · HÁBITOS</p><p class="mt-8 text-lg font-bold">Diseñá tu <span class="text-accent">sistema</span> de hábitos</p><p class="mt-2 text-[10px] text-cog">Una guía práctica basada en ciencia.</p><div class="mt-6 flex gap-2 text-[9px] text-cog"><span>Ciencia</span>·<span>Aplicable</span>·<span>Real</span></div></div></div>
+          <div><p class="text-sm text-accent">Quotes</p><div class="mt-2 aspect-[9/16] rounded-2xl border border-white/10 bg-slate p-4"><svg viewBox="0 0 24 24" fill="#4F8FD9" class="h-5 w-5 opacity-60"><path d="M7 7h4v6H7zM13 7h4v6h-4z"/></svg><p class="mt-6 font-semibold leading-snug">Entender es el primer paso. Aplicar es lo que <span class="text-accent">transforma</span>.</p></div></div>
+        </div>
+        <div class="mt-8 flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/[0.02] p-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.3" class="h-8 w-8"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="6" r="1.6" fill="#4F8FD9"/><circle cx="16" cy="17" r="1.6" fill="#4F8FD9"/><circle cx="7" cy="16" r="1.6" fill="#4F8FD9"/><path d="M6 7L18 6 16 17 7 16 6 7"/></svg><p class="font-semibold">Misma esencia. <span class="text-cog font-normal">Distintos formatos. Un mensaje claro, ciencia aplicada y acción diaria.</span></p></div>
+          <div class="flex items-center gap-2 text-xs text-cog"><span>Reels</span><span class="text-accent">→</span><span>Carruseles</span><span class="text-accent">→</span><span>Stories</span><span class="text-accent">→</span><span>Guías</span><span class="text-amber">→</span><span>Quotes</span></div>
+        </div>
       </div>
     </section>
 
-    <!-- ░░ FEED ░░ -->
-    <section id="feed" class="bg-mist">
-      <div class="mx-auto max-w-2xl px-6 py-16">
-        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">Mi feed</p>
-        <h2 class="mt-4 text-center text-2xl font-bold text-night sm:text-3xl">Lo último que publiqué</h2>
-        <div class="mt-8 grid grid-cols-3 gap-3">
-          <a href="#" class="flex aspect-square items-center justify-center rounded-2xl border border-line bg-white text-xs text-muted shadow-sm transition hover:border-accent">post 1</a>
-          <a href="#" class="flex aspect-square items-center justify-center rounded-2xl border border-line bg-white text-xs text-muted shadow-sm transition hover:border-accent">post 2</a>
-          <a href="#" class="flex aspect-square items-center justify-center rounded-2xl border border-line bg-white text-xs text-muted shadow-sm transition hover:border-accent">post 3</a>
+    <!-- ░░ PREGUNTAS FRECUENTES ░░ -->
+    <section id="acceder" class="bg-slate py-20">
+      <div class="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1.3fr_1fr]">
+        <div>
+          <p class="eyebrow">Dudas que bajan fricción</p><h2 class="mt-3 text-3xl font-bold sm:text-5xl">Preguntas <span class="text-accent">frecuentes</span>.</h2><p class="mt-3 text-cog">Si entendés cómo trabajo, te resulta más fácil dar el siguiente paso.</p>
+          <div class="mt-8 space-y-3">
+            <div class="faq rounded-2xl border border-white/10 bg-white/[0.02]"><button class="faq-q flex w-full items-center gap-4 p-5 text-left"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-sm font-bold text-accent">1</span><span class="flex-1 font-semibold">¿Esto es coaching o contenido educativo?</span><span class="faq-ic text-2xl text-cog">−</span></button><div class="faq-a px-5 pb-5 pl-[4.5rem] text-sm text-cog">Es un enfoque de acompañamiento y educación aplicada. Te ayudo a entender tu comportamiento y a traducirlo en hábitos sostenibles.</div></div>
+            <div class="faq rounded-2xl border border-white/10 bg-white/[0.02]"><button class="faq-q flex w-full items-center gap-4 p-5 text-left"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-sm font-bold text-accent">2</span><span class="flex-1 font-semibold">¿Para quién es?</span><span class="faq-ic text-2xl text-cog">−</span></button><div class="faq-a px-5 pb-5 pl-[4.5rem] text-sm text-cog">Para personas que quieren dejar de depender de la motivación, ordenar su mente y sostener cambios reales.</div></div>
+            <div class="faq rounded-2xl border border-white/10 bg-white/[0.02]"><button class="faq-q flex w-full items-center gap-4 p-5 text-left"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-sm font-bold text-accent">3</span><span class="flex-1 font-semibold">¿Necesito disciplina previa?</span><span class="faq-ic text-2xl text-cog">+</span></button><div class="faq-a hidden px-5 pb-5 pl-[4.5rem] text-sm text-cog">No. Justamente el sistema reemplaza la disciplina: empezás chico y la constancia se construye sola.</div></div>
+            <div class="faq rounded-2xl border border-white/10 bg-white/[0.02]"><button class="faq-q flex w-full items-center gap-4 p-5 text-left"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-sm font-bold text-accent">4</span><span class="flex-1 font-semibold">¿Qué diferencia hay con la motivación?</span><span class="faq-ic text-2xl text-cog">+</span></button><div class="faq-a hidden px-5 pb-5 pl-[4.5rem] text-sm text-cog">La motivación es un estado pasajero. Acá construís un sistema que funciona incluso los días que no tenés ganas.</div></div>
+            <div class="faq rounded-2xl border border-white/10 bg-white/[0.02]"><button class="faq-q flex w-full items-center gap-4 p-5 text-left"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 text-sm font-bold text-accent">5</span><span class="flex-1 font-semibold">¿Cómo trabajás?</span><span class="faq-ic text-2xl text-cog">+</span></button><div class="faq-a hidden px-5 pb-5 pl-[4.5rem] text-sm text-cog">Combino contenido educativo, herramientas de autoconocimiento y acompañamiento para que entiendas tu patrón y armes tu sistema.</div></div>
+          </div>
         </div>
-        <div class="mt-8 text-center"><a href="#" class="inline-flex items-center gap-2 rounded-full border border-night px-6 py-3 font-semibold text-night transition hover:bg-night hover:text-white">Ver todo en Instagram</a></div>
+        <div class="self-start rounded-3xl border border-white/10 bg-white/[0.02] p-8">
+          <p class="eyebrow">Idea central</p>
+          <svg viewBox="0 0 24 24" fill="#4F8FD9" class="mt-6 h-7 w-7 opacity-60"><path d="M7 7h4v6H7zM13 7h4v6h-4z"/></svg>
+          <p class="mt-4 text-2xl font-semibold leading-snug">No empezás mejor porque te exigís más. Empezás mejor porque <span class="text-accent">entendés más</span>.</p>
+          <svg viewBox="0 0 460 220" class="mt-8 h-40 w-full opacity-70" fill="none"><g stroke="#4F8FD9" stroke-width="0.7" stroke-opacity="0.4"><path d="M60 60L150 40 240 80 330 50 400 110 320 160 220 140 130 170 60 120 60 60"/></g><g fill="#7FB0E8"><circle cx="60" cy="60" r="2.5"/><circle cx="150" cy="40" r="2.5"/><circle cx="240" cy="80" r="2.5"/><circle cx="330" cy="50" r="2.5"/><circle cx="320" cy="160" r="2.5"/><circle cx="220" cy="140" r="2.5"/><circle cx="130" cy="170" r="2.5"/></g><circle cx="400" cy="110" r="5" fill="#D6A84F"/></svg>
+        </div>
       </div>
+      <div class="mx-auto mt-8 max-w-6xl px-6"><div class="flex flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.02] p-6 md:flex-row md:justify-between"><p class="flex items-center gap-3 text-cog"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-7 w-7"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>¿No encontraste tu respuesta? <a href="https://instagram.com/andrewmquez" class="font-semibold text-accent">Escribime.</a> Estoy para ayudarte.</p><a href="https://instagram.com/andrewmquez" class="group inline-flex items-center gap-3 rounded-full bg-accent py-2 pl-6 pr-2 font-semibold text-white transition hover:bg-accent/90">Quiero contactar <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-night"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-4 w-4 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></div>
     </section>
 
     <!-- ░░ CTA FINAL + FOOTER ░░ -->
-    <footer class="bg-night text-white">
-      <div class="mx-auto max-w-2xl px-6 py-20 text-center">
-        <h2 class="mx-auto max-w-lg text-2xl font-bold leading-snug sm:text-3xl">No necesitás esperar a tener ganas. Necesitás un sistema que funcione <span class="text-amber">incluso cuando no las tenés.</span></h2>
-        <a href="#acceder" class="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3 font-semibold text-white transition hover:bg-accent/90">Quiero empezar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <div class="mt-12 flex justify-center gap-6 text-sm text-cog">
-          <a href="#" class="hover:text-white">Instagram</a>
-          <a href="#" class="hover:text-white">TikTok</a>
-          <a href="#" class="hover:text-white">YouTube</a>
+    <footer class="hero-bg relative overflow-hidden">
+      <svg viewBox="0 0 400 300" class="pointer-events-none absolute right-0 top-1/2 h-80 w-80 -translate-y-1/2 opacity-50" fill="none"><g stroke="#4F8FD9" stroke-width="0.7" stroke-opacity="0.4"><path d="M200 150L120 80 280 60 340 150 280 240 120 220 200 150M200 150L60 150M200 150L340 150"/></g><g fill="#7FB0E8"><circle cx="120" cy="80" r="3"/><circle cx="280" cy="60" r="3"/><circle cx="340" cy="150" r="3"/><circle cx="280" cy="240" r="3"/><circle cx="120" cy="220" r="3"/></g><circle cx="200" cy="150" r="6" fill="#4F8FD9"/><circle cx="340" cy="150" r="5" fill="#D6A84F"/></svg>
+      <div class="relative z-10 mx-auto max-w-6xl px-6 py-20">
+        <h2 class="max-w-2xl text-3xl font-bold leading-tight sm:text-5xl">No necesitás esperar a tener ganas. Necesitás un <span class="text-accent">sistema</span> que funcione incluso cuando no las tenés.</h2>
+        <p class="mt-5 text-cog">Ciencia. Claridad. Constancia. <span class="font-semibold text-amber">Resultados.</span></p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="https://instagram.com/andrewmquez" class="group inline-flex items-center justify-center gap-3 rounded-full bg-accent py-2 pl-6 pr-2 font-semibold text-white transition hover:bg-accent/90">Quiero ordenar mis hábitos <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-night"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-4 w-4 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a href="https://instagram.com/andrewmquez" class="group inline-flex items-center justify-center gap-3 rounded-full border border-white/20 py-2 pl-2 pr-6 font-semibold text-white transition hover:border-white"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30"><svg viewBox="0 0 24 24" fill="currentColor" class="h-3.5 w-3.5"><path d="M8 5v14l11-7z"/></svg></span> Ver contenido gratuito</a>
         </div>
-        <p class="mt-8 text-lg font-semibold">Andrés · Hábitos</p>
-        <p class="mt-1 text-sm text-white/40">Comportamiento humano + hábitos · Hecho en Uruguay</p>
+        <div class="mt-16 flex flex-col gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div><p class="text-lg font-semibold">Andrés · Hábitos</p><p class="mt-1 text-sm text-white/40">Comportamiento humano + hábitos · Hecho en Uruguay</p></div>
+          <div class="flex gap-6 text-sm text-cog"><a href="https://instagram.com/andrewmquez" class="hover:text-white">Instagram</a><a href="#" class="hover:text-white">TikTok</a><a href="#" class="hover:text-white">YouTube</a></div>
+        </div>
       </div>
     </footer>
 
     <script>
-      const respuestas = {
-        'Arranco con todo y a los 3 días lo dejo': 'Eso es una rama. La raíz: interpretás el cambio como algo que se hace con intensidad. Tu cerebro frena lo que cuesta demasiado. Se reinterpreta empezando ridículamente chico.',
-        'Sé qué tengo que hacer, pero no lo hago': 'Eso es una rama. La raíz: esperás "tener ganas" para actuar. La acción se vuelve sostenible cuando deja de depender del ánimo y se ancla a lo que ya hacés.',
-        'Solo avanzo los días que tengo ganas': 'Eso es una rama. La raíz: tu identidad todavía dice "soy de los que dependen del ánimo". Eso se reescribe con evidencia nueva, no con fuerza de voluntad.',
+      // Quiz dinámico
+      const QZ = {
+        tiempo: { parece:'Falta de tiempo. Creés que el día no te alcanza.', detras:'No es tiempo, es prioridad y diseño. Sin sistema, todo compite por el mismo espacio.', micro:'Bloqueá 5 minutos fijos, siempre a la misma hora. La constancia gana al volumen.' },
+        intensidad: { parece:'Falta de disciplina. Pensás que el problema sos vos.', detras:'Arrancás desde la intensidad, no desde la sostenibilidad. Tu cerebro frena lo que cuesta demasiado.', micro:'Empezá ridículamente chico. Una acción tan mínima que sea imposible decir que no.' },
+        foco: { parece:'Te falta concentración o fuerza de voluntad.', detras:'Tu entorno está lleno de disparadores que compiten por tu atención.', micro:'Sacá una sola distracción de tu vista. Diseñá el entorno, no pelees con él.' },
+        resultados: { parece:'Que nada de lo que hacés sirve.', detras:'Medís el resultado final, no el proceso. El progreso temprano es invisible.', micro:'Registrá la acción, no el resultado. Marcá la X cada día que cumplís.' },
+        autosabotaje: { parece:'Que te falta voluntad o que sos inconsistente.', detras:'Hay una interpretación o identidad que te dice "no soy de los que lo logran".', micro:'Actuá una vez como la persona que querés ser. La identidad se construye con evidencia.' },
       };
       document.querySelectorAll('.quiz-btn').forEach((b) => {
         b.addEventListener('click', () => {
-          document.getElementById('quiz-text').textContent = respuestas[b.dataset.r];
-          const r = document.getElementById('quiz-result');
-          r.classList.remove('hidden');
-          r.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          document.querySelectorAll('.quiz-btn').forEach((o) => o.classList.remove('border-accent','bg-accent/10'));
+          b.classList.add('border-accent','bg-accent/10');
+          const d = QZ[b.dataset.k];
+          document.getElementById('q-parece').textContent = d.parece;
+          document.getElementById('q-detras').textContent = d.detras;
+          document.getElementById('q-micro').textContent = d.micro;
+        });
+      });
+      // FAQ accordion
+      document.querySelectorAll('.faq-q').forEach((q) => {
+        q.addEventListener('click', () => {
+          const a = q.parentElement.querySelector('.faq-a');
+          const ic = q.querySelector('.faq-ic');
+          const open = !a.classList.contains('hidden');
+          a.classList.toggle('hidden', open);
+          ic.textContent = open ? '+' : '−';
         });
       });
     </script>

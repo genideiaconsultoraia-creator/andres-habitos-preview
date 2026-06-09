@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrés · Hábitos — preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              night: '#080F1D', slate: '#132238', mist: '#F4F7FA',
+              cog: '#AAB4C3', accent: '#4F8FD9', amber: '#D6A84F',
+              line: '#DDE4EE', muted: '#5C6776',
+            },
+            fontFamily: { display: ['Space Grotesk', 'sans-serif'], sans: ['Inter', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
+      html { scroll-behavior: smooth; }
+      .hero-bg {
+        background:
+          radial-gradient(circle at 75% 25%, rgba(79,143,217,.20), transparent 40%),
+          linear-gradient(180deg, #080F1D 0%, #101B2E 100%);
+      }
+      .glass { background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.10); backdrop-filter: blur(12px); }
+    </style>
+  </head>
+  <body class="bg-mist text-slate">
+
+    <!-- ░░ NAV ░░ -->
+    <header class="absolute inset-x-0 top-0 z-20">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <a href="#" class="flex items-center gap-2 text-white">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" class="h-6 w-6 text-accent"><circle cx="16" cy="16" r="13"/><circle cx="11" cy="12" r="1.4" fill="currentColor"/><circle cx="21" cy="11" r="1.4" fill="currentColor"/><circle cx="19" cy="21" r="1.4" fill="currentColor"/><path d="M11 12L21 11 19 21 11 12"/></svg>
+          <span class="text-sm font-medium tracking-widest uppercase">Andrés · Hábitos</span>
+        </a>
+        <div class="hidden items-center gap-7 text-sm text-white/70 sm:flex">
+          <a href="#inicio" class="hover:text-white">Inicio</a>
+          <a href="#sobre" class="hover:text-white">Sobre mí</a>
+          <a href="#feed" class="hover:text-white">Contenido</a>
+          <a href="#base" class="hover:text-white">Recursos</a>
+          <a href="#acceder" class="rounded-full bg-accent px-5 py-2 font-semibold text-white hover:bg-accent/90">Quiero empezar</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ░░ HERO ░░ -->
+    <section id="inicio" class="hero-bg relative overflow-hidden text-white">
+      <!-- Cerebro de nodos (decorativo, derecha) -->
+      <svg viewBox="0 0 460 420" class="pointer-events-none absolute -right-16 top-10 h-[460px] w-[460px] opacity-70 sm:right-0" fill="none">
+        <g stroke="#4F8FD9" stroke-width="0.8" stroke-opacity="0.45">
+          <path d="M120 140L180 90 250 110 320 95 360 150 330 220 360 280 300 320 230 300 170 330 130 270 150 200 120 140Z"/>
+          <path d="M180 90L230 160 320 95M250 110L230 160 170 200M320 95L330 220 230 300M360 150L300 200 330 220M170 200L230 300 300 200M130 270L170 200 230 300M300 320L300 200 360 280M170 330L230 300"/>
+        </g>
+        <g fill="#7FB0E8">
+          <circle cx="120" cy="140" r="2.5"/><circle cx="180" cy="90" r="2.5"/><circle cx="250" cy="110" r="2.5"/><circle cx="320" cy="95" r="3"/><circle cx="360" cy="150" r="2.5"/><circle cx="230" cy="160" r="2.5"/><circle cx="170" cy="200" r="2.5"/><circle cx="300" cy="200" r="3"/><circle cx="330" cy="220" r="2.5"/><circle cx="130" cy="270" r="2.5"/><circle cx="170" cy="330" r="2.5"/><circle cx="230" cy="300" r="3"/><circle cx="300" cy="320" r="2.5"/><circle cx="360" cy="280" r="2.5"/>
+        </g>
+        <circle cx="300" cy="200" r="6" fill="#D6A84F" opacity="0.9"/>
+        <circle cx="300" cy="200" r="12" fill="#D6A84F" opacity="0.18"/>
+      </svg>
+
+      <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-6 pb-20 pt-28 sm:grid-cols-2 sm:pb-28 sm:pt-36">
+        <!-- Texto -->
+        <div class="relative z-10">
+          <p class="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-accent uppercase"><span class="inline-block h-1.5 w-1.5 rounded-full bg-accent"></span> Ciencia aplicada a lo que importa</p>
+          <h1 class="mt-5 text-4xl font-bold leading-[1.05] sm:text-6xl">No te falta disciplina.<br />Te falta <span class="text-accent">entender</span> tu mente.</h1>
+          <p class="mt-6 max-w-md text-lg text-cog">Ciencia del comportamiento aplicada a hábitos sostenibles. Entendé por qué hacés lo que hacés y diseñá un sistema para avanzar cada día.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#acceder" class="group inline-flex items-center justify-center gap-3 rounded-full bg-accent py-2 pl-6 pr-2 font-semibold text-white transition hover:bg-accent/90">Quiero ordenar mis hábitos <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-night"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-4 w-4 transition group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a href="#feed" class="group inline-flex items-center justify-center gap-3 rounded-full border border-white/20 py-2 pl-2 pr-6 font-semibold text-white transition hover:border-white"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/30"><svg viewBox="0 0 24 24" fill="currentColor" class="h-3.5 w-3.5"><path d="M8 5v14l11-7z"/></svg></span> Ver contenido gratuito</a>
+          </div>
+          <!-- Autoridad -->
+          <div class="mt-12 flex flex-wrap gap-6 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5">
+            <div class="flex items-center gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-6 w-6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg><div><p class="text-xl font-bold leading-none">542</p><p class="mt-1 text-[10px] tracking-wide text-cog uppercase">Siguiendo</p></div></div>
+            <div class="flex items-center gap-3 border-l border-white/10 pl-6"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-6 w-6"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="6" r="1.6" fill="#4F8FD9"/><circle cx="16" cy="17" r="1.6" fill="#4F8FD9"/><circle cx="7" cy="16" r="1.6" fill="#4F8FD9"/><path d="M6 7L18 6 16 17 7 16 6 7"/></svg><div><p class="text-xl font-bold leading-none">Base real</p><p class="mt-1 text-[10px] tracking-wide text-cog uppercase">En neurociencia</p></div></div>
+            <div class="flex items-center gap-3 border-l border-white/10 pl-6"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-6 w-6"><path d="M12 3l7 3v6c0 4-3 7-7 8-4-1-7-4-7-8V6l7-3z"/></svg><div><p class="text-xl font-bold leading-none">0%</p><p class="mt-1 text-[10px] tracking-wide text-cog uppercase">Motivación vacía</p></div></div>
+          </div>
+        </div>
+        <!-- Card de foto flotante -->
+        <div class="relative z-10 sm:justify-self-end sm:pt-48">
+          <div class="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/15 bg-white/[0.04] backdrop-blur">
+            <div class="relative h-44 bg-gradient-to-br from-slate to-night">
+              <span class="absolute inset-0 flex items-center justify-center text-sm text-white/25">tu foto acá</span>
+              <img src="/perfil.jpg" alt="Andrés" onerror="this.style.display='none'" class="absolute inset-0 h-full w-full object-cover object-top" />
+            </div>
+            <div class="p-6">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-7 w-7"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="6" r="1.6" fill="#4F8FD9"/><circle cx="16" cy="17" r="1.6" fill="#4F8FD9"/><circle cx="7" cy="16" r="1.6" fill="#4F8FD9"/><path d="M6 7L18 6 16 17 7 16 6 7M6 7l10 10"/></svg>
+              <h3 class="mt-3 text-lg font-semibold">Entender tu mente</h3>
+              <p class="mt-1 text-sm text-cog">Descubrí por qué hacés lo que hacés y cómo cambiarlo.</p>
+              <a href="#sobre" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:gap-2">Más sobre mí <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="relative z-10 pb-10 text-center">
+        <a href="#antes" class="text-xs tracking-wide text-cog uppercase">Descubrí cómo funciona</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="2" class="mx-auto mt-2 h-5 w-5 animate-bounce"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+    </section>
+
+    <!-- ░░ EL PROBLEMA ░░ -->
+    <section class="bg-slate text-white">
+      <div class="mx-auto max-w-4xl px-6 py-16">
+        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">El problema</p>
+        <h2 class="mx-auto mt-4 max-w-2xl text-center text-2xl font-bold sm:text-3xl">El problema no es que seas flojo. Es que intentás cambiar con el sistema equivocado.</h2>
+        <div class="mt-10 grid gap-4 sm:grid-cols-3">
+          <div class="glass rounded-3xl p-6"><p class="text-cog">Dependés de las ganas.</p></div>
+          <div class="glass rounded-3xl p-6"><p class="text-cog">Empezás fuerte y abandonás.</p></div>
+          <div class="glass rounded-3xl p-6"><p class="text-cog">Sabés qué hacer, pero no lo sostenés.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ QUIÉN SOY ░░ -->
+    <section id="quien" class="bg-mist">
+      <div class="mx-auto max-w-2xl px-6 py-16 text-center">
+        <p class="text-xs font-semibold tracking-[0.2em] text-accent uppercase">Quién soy</p>
+        <h2 class="mt-4 text-2xl font-bold text-night sm:text-3xl">No soy otro coach motivacional</h2>
+        <p class="mx-auto mt-5 max-w-xl text-lg text-muted">Soy Andrés. Estudio comportamiento humano, hábitos y mentalidad, y traduzco conceptos complejos en herramientas simples que podés aplicar en tu día a día.</p>
+      </div>
+    </section>
+
+    <!-- ░░ QUÉ HAGO ░░ -->
+    <section class="bg-night text-white">
+      <div class="mx-auto max-w-4xl px-6 py-16">
+        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">Qué hago</p>
+        <h2 class="mt-4 text-center text-2xl font-bold sm:text-3xl">Traduzco la ciencia a algo que usás hoy</h2>
+        <div class="mt-10 grid gap-4 sm:grid-cols-3">
+          <div class="glass rounded-3xl p-6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-7 w-7 text-accent"><circle cx="6" cy="7" r="1.6" fill="currentColor"/><circle cx="18" cy="6" r="1.6" fill="currentColor"/><circle cx="16" cy="17" r="1.6" fill="currentColor"/><circle cx="7" cy="16" r="1.6" fill="currentColor"/><path d="M6 7L18 6 16 17 7 16 6 7M6 7l10 10"/></svg>
+            <h3 class="mt-4 font-semibold">Comportamiento</h3>
+            <p class="mt-2 text-sm text-cog">Entendés por qué repetís patrones.</p>
+          </div>
+          <div class="glass rounded-3xl p-6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-7 w-7 text-accent"><path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7"/><path d="M18 2.5v3.2h-3.2M6 21.5v-3.2h3.2"/></svg>
+            <h3 class="mt-4 font-semibold">Hábitos</h3>
+            <p class="mt-2 text-sm text-cog">Convertís intención en acciones chicas.</p>
+          </div>
+          <div class="glass rounded-3xl p-6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-7 w-7 text-accent"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+            <h3 class="mt-4 font-semibold">Mentalidad</h3>
+            <p class="mt-2 text-sm text-cog">Reescribís la historia que te dirige.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CÓMO PUEDO AYUDARTE ░░ -->
+    <section class="bg-mist">
+      <div class="mx-auto max-w-2xl px-6 py-16">
+        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">¿Cómo puedo ayudarte?</p>
+        <h2 class="mt-4 text-center text-2xl font-bold text-night sm:text-3xl">A dónde vas a llegar</h2>
+        <ul class="mx-auto mt-8 grid max-w-xl gap-3">
+          <li class="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 shrink-0 text-accent"><path d="M5 12.5l4 4 10-10"/></svg> Entender por qué procrastinás — y cortarlo.</li>
+          <li class="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 shrink-0 text-accent"><path d="M5 12.5l4 4 10-10"/></svg> Hábitos que se sostienen sin fuerza de voluntad.</li>
+          <li class="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 shrink-0 text-accent"><path d="M5 12.5l4 4 10-10"/></svg> Un entorno que hace fácil el cambio.</li>
+          <li class="flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-4 shadow-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5 shrink-0 text-accent"><path d="M5 12.5l4 4 10-10"/></svg> Reescribir la historia que te contás.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ░░ LA IDEA CENTRAL + MÉTODO ░░ -->
+    <section class="bg-slate text-white">
+      <div class="mx-auto max-w-3xl px-6 py-16">
+        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">La idea central</p>
+        <h2 class="mt-4 text-center text-2xl font-bold sm:text-3xl">No peleás con la conducta. Cambiás la <span class="text-accent">interpretación</span>.</h2>
+        <p class="mx-auto mt-4 max-w-xl text-center text-cog">La mayoría ataca la rama —el síntoma—. El cambio real está en la raíz: cómo interpretás lo que te pasa.</p>
+
+        <!-- Cadena de interpretación -->
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-2 text-sm">
+          <span class="rounded-full border border-white/15 px-4 py-2 text-cog">Situación</span>
+          <span class="text-accent">→</span>
+          <span class="rounded-full border border-accent bg-accent/10 px-4 py-2 font-semibold text-accent">Interpretación</span>
+          <span class="text-accent">→</span>
+          <span class="rounded-full border border-white/15 px-4 py-2 text-cog">Conducta</span>
+          <span class="text-accent">→</span>
+          <span class="rounded-full border border-white/15 px-4 py-2 text-cog">Resultado</span>
+        </div>
+        <p class="mt-3 text-center text-xs text-cog">↑ El punto donde se cambia todo.</p>
+
+        <!-- Raíces y Ramas -->
+        <div class="mt-10 grid gap-4 sm:grid-cols-2">
+          <div class="glass rounded-3xl p-6">
+            <p class="text-xs font-semibold tracking-widest text-accent uppercase">Ramas · lo que ves</p>
+            <p class="mt-2 text-cog">Procrastinás, abandonás, te frustrás. El síntoma visible.</p>
+          </div>
+          <div class="glass rounded-3xl p-6">
+            <p class="text-xs font-semibold tracking-widest text-accent uppercase">Raíces · lo que lo causa</p>
+            <p class="mt-2 text-cog">Interpretaciones, creencias, la historia que te contás. Acá trabajamos.</p>
+          </div>
+        </div>
+
+        <!-- Proceso (4 pasos = PRE-ASCENSO) -->
+        <p class="mt-14 text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">El proceso</p>
+        <div class="relative mt-8 grid gap-6 sm:grid-cols-4">
+          <div class="absolute left-[12%] right-[12%] top-5 hidden border-t border-dashed border-white/20 sm:block"></div>
+          <div class="relative text-center"><div class="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-bold text-accent">01</div><p class="mt-3 font-semibold">Observar</p><p class="mt-1 text-xs text-cog">Detectar las ramas.</p></div>
+          <div class="relative text-center"><div class="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-bold text-accent">02</div><p class="mt-3 font-semibold">Comprender</p><p class="mt-1 text-xs text-cog">Llegar a la raíz.</p></div>
+          <div class="relative text-center"><div class="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-bold text-accent">03</div><p class="mt-3 font-semibold">Reinterpretar</p><p class="mt-1 text-xs text-cog">Cuestionar y reescribir.</p></div>
+          <div class="relative text-center"><div class="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 bg-accent/10 font-bold text-accent">04</div><p class="mt-3 font-semibold">Aplicar</p><p class="mt-1 text-xs text-cog">Nueva evidencia, nueva identidad.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ TEST INTERACTIVO ░░ -->
+    <section class="bg-mist">
+      <div class="mx-auto max-w-2xl px-6 py-16">
+        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">Probá algo ahora</p>
+        <h2 class="mt-4 text-center text-2xl font-bold text-night sm:text-3xl">¿Qué te está frenando?</h2>
+        <p class="mt-3 text-center text-muted">Elegí tu rama (el síntoma) y mirá la raíz que hay detrás.</p>
+        <div class="mt-8 grid gap-3">
+          <button data-r="Arranco con todo y a los 3 días lo dejo" class="quiz-btn flex items-center justify-between rounded-2xl border border-line bg-white px-5 py-4 text-left font-medium shadow-sm transition hover:border-accent">Arranco con todo y a los 3 días lo dejo <span class="text-accent">→</span></button>
+          <button data-r="Sé qué tengo que hacer, pero no lo hago" class="quiz-btn flex items-center justify-between rounded-2xl border border-line bg-white px-5 py-4 text-left font-medium shadow-sm transition hover:border-accent">Sé qué tengo que hacer, pero no lo hago <span class="text-accent">→</span></button>
+          <button data-r="Solo avanzo los días que tengo ganas" class="quiz-btn flex items-center justify-between rounded-2xl border border-line bg-white px-5 py-4 text-left font-medium shadow-sm transition hover:border-accent">Solo avanzo los días que tengo ganas <span class="text-accent">→</span></button>
+        </div>
+        <div id="quiz-result" class="mt-6 hidden rounded-2xl border border-accent bg-white p-6 text-center shadow-sm">
+          <p id="quiz-text" class="text-muted"></p>
+          <a href="#acceder" class="mt-4 inline-block rounded-full bg-accent px-6 py-3 font-semibold text-white transition hover:bg-accent/90">Ver cómo solucionarlo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SITUACIONES QUE TRABAJO ░░ -->
+    <section class="bg-night text-white">
+      <div class="mx-auto max-w-4xl px-6 py-16">
+        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">En qué te acompaño</p>
+        <h2 class="mt-4 text-center text-2xl font-bold sm:text-3xl">Situaciones que trabajo</h2>
+        <div class="mt-10 grid gap-4 sm:grid-cols-3">
+          <div class="glass rounded-3xl p-6"><p class="font-semibold">Procrastinación crónica</p><p class="mt-2 text-sm text-cog">Cuando arrancar se vuelve la barrera.</p></div>
+          <div class="glass rounded-3xl p-6"><p class="font-semibold">Hábitos que no pegan</p><p class="mt-2 text-sm text-cog">Intentás una y otra vez sin sostenerlo.</p></div>
+          <div class="glass rounded-3xl p-6"><p class="font-semibold">Desorden mental</p><p class="mt-2 text-sm text-cog">Demasiadas ideas, poca acción concreta.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ BASE CIENTÍFICA ░░ -->
+    <section id="base" class="bg-mist">
+      <div class="mx-auto max-w-3xl px-6 py-16 text-center">
+        <p class="text-xs font-semibold tracking-[0.2em] text-accent uppercase">En qué me baso</p>
+        <h2 class="mt-4 text-2xl font-bold text-night sm:text-3xl">No es opinión: es ciencia del comportamiento</h2>
+        <div class="mt-10 grid gap-4 text-left sm:grid-cols-2">
+          <div class="rounded-2xl border border-line bg-white p-5 shadow-sm"><p class="text-xs font-semibold tracking-wide text-accent uppercase">Hábitos</p><p class="mt-1 text-sm text-muted">James Clear · BJ Fogg · Charles Duhigg</p></div>
+          <div class="rounded-2xl border border-line bg-white p-5 shadow-sm"><p class="text-xs font-semibold tracking-wide text-accent uppercase">Decisiones y mente</p><p class="mt-1 text-sm text-muted">Daniel Kahneman</p></div>
+          <div class="rounded-2xl border border-line bg-white p-5 shadow-sm"><p class="text-xs font-semibold tracking-wide text-accent uppercase">Neurociencia aplicada</p><p class="mt-1 text-sm text-muted">Andrew Huberman</p></div>
+          <div class="rounded-2xl border border-line bg-white p-5 shadow-sm"><p class="text-xs font-semibold tracking-wide text-accent uppercase">Comportamiento y cambio</p><p class="mt-1 text-sm text-muted">Stanford Behavior Design · psicología conductual</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CÓMO EMPEZAR + FORM ░░ -->
+    <section id="acceder" class="bg-slate text-white">
+      <div class="mx-auto max-w-xl px-6 py-20">
+        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">Cómo empezar</p>
+        <h2 class="mt-4 text-center text-2xl font-bold sm:text-3xl">3 pasos para empezar</h2>
+        <ol class="mx-auto mt-8 grid gap-3">
+          <li class="flex gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4"><span class="font-bold text-accent">1</span> Seguime en Instagram <strong>@andrewmquez</strong>.</li>
+          <li class="flex gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4"><span class="font-bold text-accent">2</span> Descargá gratis la guía <strong>"5 hábitos respaldados por neurociencia"</strong>.</li>
+          <li class="flex gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4"><span class="font-bold text-accent">3</span> Aplicá un hábito y contame por DM cómo te fue.</li>
+        </ol>
+        <form class="mt-8 flex flex-col gap-4">
+          <input type="text" placeholder="Tu nombre" class="rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-white placeholder:text-white/40 outline-none focus:border-accent" />
+          <input type="email" placeholder="Tu email" class="rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-white placeholder:text-white/40 outline-none focus:border-accent" />
+          <input type="tel" placeholder="WhatsApp (opcional)" class="rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-white placeholder:text-white/40 outline-none focus:border-accent" />
+          <button type="button" class="rounded-full bg-accent px-7 py-3 font-semibold text-white transition hover:bg-accent/90">Mandame la guía gratis</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ░░ FEED ░░ -->
+    <section id="feed" class="bg-mist">
+      <div class="mx-auto max-w-2xl px-6 py-16">
+        <p class="text-center text-xs font-semibold tracking-[0.2em] text-accent uppercase">Mi feed</p>
+        <h2 class="mt-4 text-center text-2xl font-bold text-night sm:text-3xl">Lo último que publiqué</h2>
+        <div class="mt-8 grid grid-cols-3 gap-3">
+          <a href="#" class="flex aspect-square items-center justify-center rounded-2xl border border-line bg-white text-xs text-muted shadow-sm transition hover:border-accent">post 1</a>
+          <a href="#" class="flex aspect-square items-center justify-center rounded-2xl border border-line bg-white text-xs text-muted shadow-sm transition hover:border-accent">post 2</a>
+          <a href="#" class="flex aspect-square items-center justify-center rounded-2xl border border-line bg-white text-xs text-muted shadow-sm transition hover:border-accent">post 3</a>
+        </div>
+        <div class="mt-8 text-center"><a href="#" class="inline-flex items-center gap-2 rounded-full border border-night px-6 py-3 font-semibold text-night transition hover:bg-night hover:text-white">Ver todo en Instagram</a></div>
+      </div>
+    </section>
+
+    <!-- ░░ CTA FINAL + FOOTER ░░ -->
+    <footer class="bg-night text-white">
+      <div class="mx-auto max-w-2xl px-6 py-20 text-center">
+        <h2 class="mx-auto max-w-lg text-2xl font-bold leading-snug sm:text-3xl">No necesitás esperar a tener ganas. Necesitás un sistema que funcione <span class="text-amber">incluso cuando no las tenés.</span></h2>
+        <a href="#acceder" class="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3 font-semibold text-white transition hover:bg-accent/90">Quiero empezar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="mt-12 flex justify-center gap-6 text-sm text-cog">
+          <a href="#" class="hover:text-white">Instagram</a>
+          <a href="#" class="hover:text-white">TikTok</a>
+          <a href="#" class="hover:text-white">YouTube</a>
+        </div>
+        <p class="mt-8 text-lg font-semibold">Andrés · Hábitos</p>
+        <p class="mt-1 text-sm text-white/40">Comportamiento humano + hábitos · Hecho en Uruguay</p>
+      </div>
+    </footer>
+
+    <script>
+      const respuestas = {
+        'Arranco con todo y a los 3 días lo dejo': 'Eso es una rama. La raíz: interpretás el cambio como algo que se hace con intensidad. Tu cerebro frena lo que cuesta demasiado. Se reinterpreta empezando ridículamente chico.',
+        'Sé qué tengo que hacer, pero no lo hago': 'Eso es una rama. La raíz: esperás "tener ganas" para actuar. La acción se vuelve sostenible cuando deja de depender del ánimo y se ancla a lo que ya hacés.',
+        'Solo avanzo los días que tengo ganas': 'Eso es una rama. La raíz: tu identidad todavía dice "soy de los que dependen del ánimo". Eso se reescribe con evidencia nueva, no con fuerza de voluntad.',
+      };
+      document.querySelectorAll('.quiz-btn').forEach((b) => {
+        b.addEventListener('click', () => {
+          document.getElementById('quiz-text').textContent = respuestas[b.dataset.r];
+          const r = document.getElementById('quiz-result');
+          r.classList.remove('hidden');
+          r.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -136,56 +136,6 @@
       </div>
     </section>
 
-    <!-- ░░ ¿QUÉ TE ESTÁ FRENANDO? (dinámica) ░░ -->
-    <section class="bg-night py-20">
-      <div class="mx-auto max-w-6xl px-6">
-        <div><p class="eyebrow">Decision point: conocete</p><h2 class="mt-3 text-3xl font-bold sm:text-4xl">¿Qué te está <span class="text-accent">frenando</span>?</h2><p class="mt-3 max-w-2xl text-cog">Explorá los patrones más comunes que sabotean el cambio. Elegí el que más se parece a vos para descubrir qué hay detrás.</p></div>
-        <div id="quiz-options" class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          <button class="quiz-btn rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-accent" data-k="tiempo"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-4 w-4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><p class="mt-3 font-semibold">No tengo tiempo</p><p class="mt-1 text-xs text-cog">Siento que el día no alcanza.</p></button>
-          <button class="quiz-btn rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-accent" data-k="intensidad"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-4 w-4"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><p class="mt-3 font-semibold">Arranco con todo y a los 3 días lo dejo</p><p class="mt-1 text-xs text-cog">Me cuesta sostener en el tiempo.</p></button>
-          <button class="quiz-btn rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-accent" data-k="foco"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-4 w-4"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="17" r="1.6" fill="#4F8FD9"/><path d="M6 7l12 10"/></svg></span><p class="mt-3 font-semibold">Me distraigo con facilidad</p><p class="mt-1 text-xs text-cog">Me cuesta mantener el foco.</p></button>
-          <button class="quiz-btn rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-accent" data-k="resultados"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-4 w-4"><path d="M4 16l5-5 4 4 7-8"/></svg></span><p class="mt-3 font-semibold">No veo resultados y me desmotivo</p><p class="mt-1 text-xs text-cog">Siento que nada cambia.</p></button>
-          <button class="quiz-btn rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-accent" data-k="autosabotaje"><span class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-4 w-4"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9 15c1-1 5-1 6 0"/></svg></span><p class="mt-3 font-semibold">Sé qué hacer, pero no lo hago</p><p class="mt-1 text-xs text-cog">Me saboteo aunque lo tengo claro.</p></button>
-        </div>
-        <div class="mt-6 rounded-3xl border border-accent/30 bg-white/[0.02] p-8">
-          <p class="eyebrow">Lo que te puede estar pasando</p>
-          <div class="mt-5 grid gap-6 md:grid-cols-3">
-            <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.5" class="h-7 w-7 shrink-0"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><div><p class="font-semibold">Lo que parece</p><p id="q-parece" class="mt-1 text-sm text-cog">Falta de disciplina. Pensás que el problema sos vos.</p></div></div>
-            <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-7 w-7 shrink-0"><circle cx="6" cy="7" r="1.6" fill="#4F8FD9"/><circle cx="18" cy="6" r="1.6" fill="#4F8FD9"/><circle cx="12" cy="16" r="1.6" fill="#4F8FD9"/><path d="M6 7L18 6 12 16 6 7"/></svg><div><p class="font-semibold">Lo que hay detrás</p><p id="q-detras" class="mt-1 text-sm text-cog">Expectativas irreales + sistema débil. Intentás cambiar desde la motivación.</p></div></div>
-            <div class="flex gap-3"><svg viewBox="0 0 24 24" fill="none" stroke="#D6A84F" stroke-width="1.5" class="h-7 w-7 shrink-0"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg><div><p class="font-semibold text-amber">Microacción</p><p id="q-micro" class="mt-1 text-sm text-cog">Reducí, enfocá y repetí. Elegí una sola acción mínima que puedas sostener 7 días.</p></div></div>
-          </div>
-        </div>
-        <!-- dos paneles -->
-        <div class="mt-6 grid gap-6 lg:grid-cols-2">
-          <div class="rounded-3xl border border-white/10 bg-white/[0.02] p-8">
-            <p class="eyebrow">Sistema interno del cambio</p><h3 class="mt-3 text-2xl font-semibold">Cómo funciona el cambio real</h3><p class="mt-2 text-sm text-cog">No es motivación. Es un sistema. Cuando alineás estas 4 fuerzas, el cambio deja de depender de vos y empieza a sostenerse solo.</p>
-            <div class="mt-8 flex items-start justify-between gap-1 text-center">
-              <div class="flex-1"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5"><circle cx="6" cy="7" r="1.6" fill="currentColor"/><circle cx="18" cy="6" r="1.6" fill="currentColor"/><circle cx="16" cy="17" r="1.6" fill="currentColor"/><circle cx="7" cy="16" r="1.6" fill="currentColor"/><path d="M6 7L18 6 16 17 7 16 6 7"/></svg></span><p class="mt-2 text-sm font-semibold">Mente</p><p class="mt-1 text-[11px] text-cog">Claridad y enfoque.</p></div>
-              <svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="2" class="mt-4 h-4 w-4 shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              <div class="flex-1"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><path d="M3 12a9 9 0 0115-6.7M21 12a9 9 0 01-15 6.7"/></svg></span><p class="mt-2 text-sm font-semibold">Hábitos</p><p class="mt-1 text-[11px] text-cog">Acciones que se repiten.</p></div>
-              <svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="2" class="mt-4 h-4 w-4 shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              <div class="flex-1"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5"><path d="M4 11l8-6 8 6M6 10v8h12v-8"/></svg></span><p class="mt-2 text-sm font-semibold">Entorno</p><p class="mt-1 text-[11px] text-cog">Contexto que impulsa.</p></div>
-              <svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="2" class="mt-4 h-4 w-4 shrink-0"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              <div class="flex-1"><span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-amber/40 bg-amber/10 text-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" class="h-5 w-5"><circle cx="12" cy="8" r="3"/><path d="M6 20c0-3 2.5-5 6-5s6 2 6 5"/></svg></span><p class="mt-2 text-sm font-semibold">Identidad</p><p class="mt-1 text-[11px] text-cog">La persona que actúa.</p></div>
-            </div>
-            <div class="mt-6 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-center"><p class="text-sm"><span class="font-semibold text-accent">Resultado:</span> cambio sostenible y libertad personal.</p></div>
-          </div>
-          <div class="rounded-3xl border border-white/10 bg-white/[0.02] p-8">
-            <p class="eyebrow">Tus decisiones, tu rumbo</p><h3 class="mt-3 text-2xl font-semibold">Cada decisión te lleva a un futuro</h3><p class="mt-2 text-sm text-cog">Pequeñas elecciones diarias crean grandes diferencias. Elegí con conciencia. Diseñá tu camino.</p>
-            <div class="mt-8 space-y-3">
-              <div class="flex items-center gap-4 rounded-2xl border border-accent/20 bg-accent/[0.04] p-4"><span class="flex h-10 w-10 items-center justify-center rounded-full border border-accent/40 text-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5"><path d="M5 16l4-8 3 5 3-7 4 10"/></svg></span><div><p class="font-semibold text-accent">Camino de crecimiento</p><p class="text-xs text-cog">Disciplina diaria, claridad y resultados compuestos.</p></div></div>
-              <div class="flex items-center gap-4 rounded-2xl border border-white/10 p-4"><span class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-cog"><svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><circle cx="6" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="18" cy="12" r="1.5"/></svg></span><div><p class="font-semibold">Camino automático</p><p class="text-xs text-cog">Vivís en piloto automático y te adaptás al entorno.</p></div></div>
-              <div class="flex items-center gap-4 rounded-2xl border border-amber/20 p-4"><span class="flex h-10 w-10 items-center justify-center rounded-full border border-amber/40 text-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><p class="font-semibold">Camino de regresión</p><p class="text-xs text-cog">Desgaste, frustración y la misma historia de siempre.</p></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-6 flex flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.02] p-6 md:flex-row md:justify-between">
-          <p class="flex items-center gap-3 font-semibold"><svg viewBox="0 0 24 24" fill="none" stroke="#4F8FD9" stroke-width="1.4" class="h-7 w-7"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg> Entender es el primer paso. Aplicar es lo que transforma.</p>
-          <a href="#acceder" class="group inline-flex items-center gap-3 rounded-full bg-accent py-2 pl-6 pr-2 font-semibold text-white transition hover:bg-accent/90">Quiero ordenar mis hábitos <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-night"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-4 w-4 group-hover:translate-x-0.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-        </div>
-      </div>
-    </section>
-
     <!-- ░░ TU PROGRESO TIENE ETAPAS ░░ -->
     <section class="relative overflow-hidden bg-slate py-20">
       <img src="img/brain-b.jpg" alt="" class="pointer-events-none absolute -right-16 top-0 h-72 w-72 object-contain opacity-50" style="mix-blend-mode:screen;-webkit-mask-image:radial-gradient(circle at center, #000 45%, transparent 72%);mask-image:radial-gradient(circle at center, #000 45%, transparent 72%)" />
@@ -306,24 +256,6 @@
     </footer>
 
     <script>
-      // Quiz dinámico
-      const QZ = {
-        tiempo: { parece:'Falta de tiempo. Creés que el día no te alcanza.', detras:'No es tiempo, es prioridad y diseño. Sin sistema, todo compite por el mismo espacio.', micro:'Bloqueá 5 minutos fijos, siempre a la misma hora. La constancia gana al volumen.' },
-        intensidad: { parece:'Falta de disciplina. Pensás que el problema sos vos.', detras:'Arrancás desde la intensidad, no desde la sostenibilidad. Tu cerebro frena lo que cuesta demasiado.', micro:'Empezá ridículamente chico. Una acción tan mínima que sea imposible decir que no.' },
-        foco: { parece:'Te falta concentración o fuerza de voluntad.', detras:'Tu entorno está lleno de disparadores que compiten por tu atención.', micro:'Sacá una sola distracción de tu vista. Diseñá el entorno, no pelees con él.' },
-        resultados: { parece:'Que nada de lo que hacés sirve.', detras:'Medís el resultado final, no el proceso. El progreso temprano es invisible.', micro:'Registrá la acción, no el resultado. Marcá la X cada día que cumplís.' },
-        autosabotaje: { parece:'Que te falta voluntad o que sos inconsistente.', detras:'Hay una interpretación o identidad que te dice "no soy de los que lo logran".', micro:'Actuá una vez como la persona que querés ser. La identidad se construye con evidencia.' },
-      };
-      document.querySelectorAll('.quiz-btn').forEach((b) => {
-        b.addEventListener('click', () => {
-          document.querySelectorAll('.quiz-btn').forEach((o) => o.classList.remove('border-accent','bg-accent/10'));
-          b.classList.add('border-accent','bg-accent/10');
-          const d = QZ[b.dataset.k];
-          document.getElementById('q-parece').textContent = d.parece;
-          document.getElementById('q-detras').textContent = d.detras;
-          document.getElementById('q-micro').textContent = d.micro;
-        });
-      });
       // FAQ accordion
       document.querySelectorAll('.faq-q').forEach((q) => {
         q.addEventListener('click', () => {
